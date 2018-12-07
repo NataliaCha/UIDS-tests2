@@ -548,6 +548,13 @@
       <option name="number" value="Default" />
       <updated>1543325525842</updated>
     </task>
+    <task id="LOCAL-00001" summary="check">
+      <created>1544196098920</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544196098920</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -620,6 +627,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="check" />
+    <option name="LAST_COMMIT_MESSAGE" value="check" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
