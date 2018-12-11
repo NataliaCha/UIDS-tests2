@@ -53,7 +53,7 @@ public class DSTest {
 
 
     @Test
-
+@Ignore
     public void createDCTest() {
 
         driver.findElement(By.xpath("//div[@class='hider']")).click();
