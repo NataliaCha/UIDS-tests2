@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DSTest.java" afterPath="$PROJECT_DIR$/src/test/java/DSTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" afterPath="$PROJECT_DIR$/src/test/java/FirstTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LookupTest.java" afterPath="$PROJECT_DIR$/src/test/java/LookupTest.java" />
     </list>
     <ignored path="uitest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,13 +27,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FirstTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/FirstTest.java">
+      <file leaf-file-name="LookupTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/LookupTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43333334">
-              <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
+            <state vertical-scroll-proportion="8.750922">
+              <caret line="279" column="107" selection-start-line="279" selection-start-column="107" selection-end-line="279" selection-end-column="107" />
               <folding>
-                <element signature="e#0#13306#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -61,10 +60,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/LookupTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/QGPolicyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/DSTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/FirstTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LookupTest.java" />
       </list>
     </option>
   </component>
@@ -255,28 +254,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.FirstTest.loadmodelTest">
-    <configuration default="false" name="QGPolicyTest.DeletenewDQTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="uitest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="QGPolicyTest" />
-      <option name="METHOD_NAME" value="DeletenewDQTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.LookupTest">
     <configuration default="false" name="QGPolicyTest.CreatenewDQTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="uitest" />
@@ -349,6 +327,27 @@
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
       <option name="METHOD_NAME" value="loadmodelTest" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="LookupTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="uitest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LookupTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -640,19 +639,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.QGPolicyTest.DeletenewDQTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.QGPolicyTest.CreatenewDQTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DSTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FirstTest.loadmodelTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.QGPolicyTest.CreatenewDQTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DSTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FirstTest.loadmodelTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.LookupTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FirstTest.loadmodelTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DSTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.QGPolicyTest.CreatenewDQTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.QGPolicyTest.DeletenewDQTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LookupTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FirstTest.loadmodelTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DSTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.QGPolicyTest.CreatenewDQTest" />
       </list>
     </recent_temporary>
   </component>
@@ -685,39 +684,45 @@
       <option name="project" value="LOCAL" />
       <updated>1544451218263</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Try to find name to load model">
+      <created>1544543099920</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544543099920</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 02m 06s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 15m 50s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 04m 14s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 21m 37s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 05m 08s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 26m 58s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 08m 03s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 28m 53s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 10m 03s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 41m 22s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 11m 53s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 43m 22s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 12m 40s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 44m 48s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 15m 11s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 49m 34s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 16m 28s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 51m 27s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FirstTest_loadmodelTest - 2018.12.11 at 15h 17m 10s.xml">
-      <configuration name="FirstTest.loadmodelTest" configurationId="JUnit" />
+    <history-entry file="LookupTest - 2018.12.12 at 17h 55m 00s.xml">
+      <configuration name="LookupTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -729,9 +734,9 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37346712" sideWeight="0.20948827" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17910448" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1444563" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36677814" sideWeight="0.7905117" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3645485" sideWeight="0.7905117" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1881663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -762,19 +767,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="check" />
     <MESSAGE value="divide to different classes and add  test to delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="divide to different classes and add  test to delete" />
+    <MESSAGE value="Try to find name to load model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to find name to load model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/LookupTest.java</url>
-          <line>139</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -788,7 +786,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13306#0" expanded="true" />
+            <element signature="e#0#13310#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -807,7 +805,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13306#0" expanded="true" />
+            <element signature="e#0#13310#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -821,22 +819,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LookupTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222038">
-          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DSTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.105175294">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -851,10 +839,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/FirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43333334">
-          <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.41666666">
+          <caret line="192" column="7" selection-start-line="192" selection-start-column="7" selection-end-line="192" selection-end-column="7" />
           <folding>
-            <element signature="e#0#13306#0" expanded="true" />
+            <element signature="e#0#13310#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LookupTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.750922">
+          <caret line="279" column="107" selection-start-line="279" selection-start-column="107" selection-end-line="279" selection-end-column="107" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>

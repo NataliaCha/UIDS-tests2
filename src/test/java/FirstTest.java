@@ -188,9 +188,9 @@ public class FirstTest {
 
        // DateFormat format = new SimpleDateFormat(("yyyy-MM-dd'T'HH:mm:ss");
         DateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        Date Dpartnamefull = format.parse(partnamefull);
+       // Date Dpartnamefull = format.parse(partnamefull);
        // Date date = format1.parse(partnamefull);
-        System.out.println(Dpartnamefull); // Sat Jan 02 00:00:00 GMT 2010
+     //   System.out.println(Dpartnamefull); // Sat Jan 02 00:00:00 GMT 2010
 
         //проверка что все загрузка прошла успешна - хреново работает
   //      driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@class='notifications-bar js-notifications-bar-element']/div[@class='notifications js-notifications-bar-element']/div[@class='notification'][last()]/*[text()=' Metamodel export - successfully finished']"));
