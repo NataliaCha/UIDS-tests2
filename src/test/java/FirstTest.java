@@ -4,25 +4,31 @@
  * Created by natalia.chaplygina on 22.11.2018.
  */
 
-import org.junit.*;
-import org.openqa.selenium.*;
+import org.apache.commons.io.FileUtils;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.Alert;
 
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
 import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
@@ -45,8 +51,30 @@ public class FirstTest {
     @BeforeClass
 
     public static void setup() {
+        File file = new File(".\\mydownloads");
+        if (file.exists()) {
+            try {
+                FileUtils.deleteDirectory(file);
+                file.mkdir();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            file.mkdir();
+        }
         System.setProperty("webdriver.chrome.driver", "C:/Users/natalia.chaplygina/chromedriver/chromedriver.exe");
-        driver = new ChromeDriver();
+        String downloadFilepath = System.getProperty("user.dir");
+        System.out.println(downloadFilepath);
+        downloadFilepath = downloadFilepath + "\\mydownloads";
+        HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+        chromePrefs.put("download.default_directory", downloadFilepath);
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", chromePrefs);
+
+        DesiredCapabilities cap = DesiredCapabilities.chrome();
+        cap.setCapability(ChromeOptions.CAPABILITY, options);
+
+        driver = new ChromeDriver(cap);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://prototype.datasynthes.com/synthes-frontend/model");
@@ -147,16 +175,13 @@ public class FirstTest {
         webDriverWait = new WebDriverWait(driver, 5);
 
 
-           }
+    }
 
 
-
-     @Test
- @Ignore
-        //эскпортируем модель
-      public  void ExportmodelTest(){
-
-
+    @Test
+    @Ignore
+    //эскпортируем модель
+    public void ExportmodelTest() {
 
 
         driver.findElement(By.xpath("//div[@class='hider']")).click();
@@ -174,36 +199,55 @@ public class FirstTest {
 
     @Test
 
-    public void loadmodelTest() {
+    public void loadModelTest() {
+
+        String downloadFilepath = System.getProperty("user.dir");
+        System.out.println(downloadFilepath);
+        downloadFilepath = downloadFilepath + "\\mydownloads";
+
+
         driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@id='navigation']/ul[@class='navigation-menu bottom-menu']/li[2]/a/i[@class='commenting outline large icon']")).click();
         //здесь бы надо получить имя
         WebElement namemodel = driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@class='notifications-bar js-notifications-bar-element']/div[@class='notifications js-notifications-bar-element']/div[@class='notification'][last()]"));
         String partname = namemodel.getText();
         // driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@class='notifications-bar js-notifications-bar-element']/div[@class='notifications js-notifications-bar-element']/div[@class='notification'][last()]")).getText();
 
-        System.out.println(partname.substring(2,21));
+        System.out.println(partname);
         //записали дату в переменную
-        String partnamefull=partname.substring(2,21);
-      //  SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        //  SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
-       // DateFormat format = new SimpleDateFormat(("yyyy-MM-dd'T'HH:mm:ss");
-        DateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-       // Date Dpartnamefull = format.parse(partnamefull);
-       // Date date = format1.parse(partnamefull);
-     //   System.out.println(Dpartnamefull); // Sat Jan 02 00:00:00 GMT 2010
+        // DateFormat format = new SimpleDateFormat(("yyyy-MM-dd'T'HH:mm:ss");
+        // Date Dpartnamefull = format.parse(partnamefull);
+        // Date date = format1.parse(partnamefull);
+        //   System.out.println(Dpartnamefull); // Sat Jan 02 00:00:00 GMT 2010
 
         //проверка что все загрузка прошла успешна - хреново работает
-  //      driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@class='notifications-bar js-notifications-bar-element']/div[@class='notifications js-notifications-bar-element']/div[@class='notification'][last()]/*[text()=' Metamodel export - successfully finished']"));
-        driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@class='notifications-bar js-notifications-bar-element']/div[@class='notifications js-notifications-bar-element']/div[@class='notification'][last()]/span[@class='link']")).click();
+        //      driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@class='notifications-bar js-notifications-bar-element']/div[@class='notifications js-notifications-bar-element']/div[@class='notification'][last()]/*[text()=' Metamodel export - successfully finished']"));
+        WebElement downloadModel = driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@class='notifications-bar js-notifications-bar-element']/div[@class='notifications js-notifications-bar-element']/div[@class='notification'][last()]/span[@class='link']"));
+        downloadModel.click();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String fileName = findFile(downloadFilepath);
+        System.out.println(fileName);
 
 
         //импортируем модель
         // driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/div[@id='navigation']/ul[@class='navigation-menu main-menu']/li[2]/ul/li[1]/a[1]")).click();
 
-       // driver.findElement(By.xpath("//div[@class='hider']")).click();
+        // driver.findElement(By.xpath("//div[@class='hider']")).click();
 
         driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/div[@id='navigation']/ul[@class='navigation-menu main-menu']/li[2]/ul/li[1]/a/i[@class='puzzle large icon']")).click();
 
+        WebElement element = driver.findElement(By.xpath("//div[@class='sidebar']"));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element);
+        // actions.click();
+        actions.perform();
+
+        driver.findElement(By.xpath("//div[@class='hider']")).click();
         WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
         webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("//div[@class='hider']")));
         WebElement exim = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='hider']/div[@class='to-hide']/div[@class='sidebar-bottom']/button[1]")));
@@ -211,8 +255,8 @@ public class FirstTest {
         driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='actions']/button[@class='ui primary button'][1]")).click();
 
         WebElement uploadElement = driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='content']/div[@class='ui action input']/input"));
-/// надо передвавть переменную
-        uploadElement.sendKeys("C:\\Users\\natalia.chaplygina\\Downloads\\default2018-12-11_12-03-03.zip");
+        // надо передвавть переменную
+        uploadElement.sendKeys(fileName);
         driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='content']/div[@class='ui action input']/button[@class='ui icon button']/i[@class='upload icon']")).click();
         // driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='actions']/button[@class='ui primary button']C:\Users\natalia.chaplygina\Downloads
 
@@ -221,6 +265,18 @@ public class FirstTest {
         driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
     }
 
+    private String findFile(String downloadFilepath) {
+        File dir = new File(downloadFilepath);
+        File[] matches = dir.listFiles(new FilenameFilter() {
+            public boolean accept(File dir, String name) {
+                return name.startsWith("default") && name.endsWith(".zip");
+            }
+        });
+        String fileName = "";
+        if (matches != null) {
+            fileName = matches[0].toString();
+        }
+        return fileName;    }
 
 
 
