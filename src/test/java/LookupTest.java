@@ -56,7 +56,8 @@ public class LookupTest {
 
     @Test
 
-    public void AcreateLookUpTest() {
+    public void A() {
+//createLookUpTest
 
         driver.findElement(By.xpath("//div[@class='hider']")).click();
         WebDriverWait webDriverWait = new WebDriverWait(driver, 5);
@@ -92,8 +93,8 @@ public class LookupTest {
     //работа с  существующим lookup
     @Test
 
-    public void BrealLookUpTest() {
-
+    public void B() {
+//realLookUpTest
 
         driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][5]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
         driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
@@ -102,6 +103,15 @@ public class LookupTest {
         driver.findElement(By.xpath("//*[text()='lookuptest_" + str + "']")).click();
 
         driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
+
+
+        //проверим,что уже существует автоматически созданный coded
+
+//       Assert.assertNotNull();****************************************************************************
+        driver.findElement(By.xpath("//*[text()='Code']")).click();
+
+
+
 
 
         Actions builder = new Actions(driver);
@@ -127,11 +137,11 @@ public class LookupTest {
         driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][6]//div[@class='field'][2]//div[@class='ui fluid selection dropdown']")).click();
         driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][6]//div[@class='field'][2]//div[@class='ui active visible fluid selection dropdown']//div[@class='visible menu transition']//div[@class='item'][2]")).click();
 
-        //НЕ рaботает
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!НЕ рaботает
 
-        //    driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][10]//div[@class='field']//div[@class='ui fluid multiple selection dropdown']")).click();
-        //    driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][10]//div[@class='field']//div[@class='ui active visible fluid multiple selection dropdown']//div[@class='visible menu transition']//div[@class='item'][1]")).click();
-        //     driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane2  ']/div[@class='entity-business-glossary']/form[@class='ui form']/div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][10]/div[@class='field']/div[@class='ui active visible fluid multiple selection dropdown']/i[@class='dropdown icon']")).click();
+  //         driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][10]//div[@class='field']//div[@class='ui fluid multiple selection dropdown']")).click();
+  //         driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][10]//div[@class='field']//div[@class='ui active visible fluid multiple selection dropdown']//div[@class='visible menu transition']//div[@class='item'][1]")).click();
+  //          driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane2  ']/div[@class='entity-business-glossary']/form[@class='ui form']/div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][10]/div[@class='field']/div[@class='ui active visible fluid multiple selection dropdown']/i[@class='dropdown icon']")).click();
 
         driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][11]//div[@class='field']//div[@class='ui fluid multiple selection dropdown']")).click();
         driver.findElement(By.xpath("//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][2]//div[@class='content']//div[@class='equal width fields'][11]//div[@class='field']//div[@class='ui active visible fluid multiple selection dropdown']//div[@class='visible menu transition']//div[@class='item'][1]")).click();
@@ -276,7 +286,13 @@ public class LookupTest {
 
 
         System.out.println ("нажали сохранить");
-
+        String alertText = "";
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-popup")));
+        WebElement toast1 = driver.findElement(By.className("notification-popup"));
+        alertText = toast1.getText();
+        System.out.println(alertText);
+        Assert.assertEquals("Data is saved!", alertText);
      ///а вот тут частенько падает ошибка, потому что каким то чудом не сохраняется и при закрытии всплывает окно
         //закрыли
     driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='ui pointing secondary menu']/a[@class='active item']/span[@class='close-tab']/span[@class='bp3-icon bp3-icon-small-cross']")).click();
@@ -288,10 +304,11 @@ public class LookupTest {
 
     @Test
 
-    public void VCheckLookupTest() {
+    public void C() {
 
-        driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][5]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
-        driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
+//CheckLookupTest
+  //      driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][5]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
+  //      driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
 
         System.out.println ("нажали это все");
 //ищем созданный в предыдущем тесте
@@ -304,28 +321,70 @@ public class LookupTest {
 
         System.out.println ("1");
 
-        Assert.assertEquals(driver.findElement(By.name("Name")).getAttribute("value"), "lookup" + "test_" + str);
+        Assert.assertEquals(driver.findElement(By.name("name")).getAttribute("value"), "lookup" + "test_" + str);
 
         System.out.println ("2");
 
 //порверим что стало для testnotcoded_
         driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
-        driver.findElement(By.xpath("//*[text()='testnotcoded_" + str + "']")).click();
-
-        Assert.assertEquals(driver.findElement(By.name("displayName")).getAttribute("value"), "testnotcoded" + str);
-
-
+        driver.findElement(By.xpath("//*[text()='testnotcoded" + str + "']")).click();
+//        Assert.assertEquals(driver.findElement(By.name("displayName")).getAttribute("value"), "testnotcoded" + str);
         Assert.assertEquals(driver.findElement(By.name("definition")).getAttribute("value"), "testnotcoded" + str);
         Assert.assertEquals(driver.findElement(By.name("example")).getAttribute("value"), "testnotcoded" + str);
         Assert.assertEquals(driver.findElement(By.name("acronym")).getAttribute("value"), "testnotcoded" + str);
 
 
+        //проверяем Synonyms:
+
+        Assert.assertEquals(driver.findElement(By.xpath("//div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][9]/div[@class='field']/div[@class='entity-synonyms']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][1]/div[@class='ui fluid selection dropdown']")).getText(),"SSS");
+        Assert.assertEquals(driver.findElement(By.xpath("//div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][9]/div[@class='field']/div[@class='entity-synonyms']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div[@class='ui input']")).getText(),"asdasd");
+
+
+        Assert.assertEquals(driver.findElement(By.xpath("//div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][11]/div[@class='field']/div[@class='ui fluid multiple selection dropdown']/a[@class='ui label']")).getText(),"Accounting Glossary");
+        Assert.assertEquals(driver.findElement(By.name("synonym")).getAttribute("value"),"asdasd");
+
+
+        //проверяем MANAGED BY
+        Assert.assertEquals(driver.findElement(By.name("dataSteward")).getAttribute("value"),"QA");
+        Assert.assertEquals(driver.findElement(By.name("phone")).getAttribute("value"),"892100305ABC");
+        Assert.assertEquals(driver.findElement(By.name("email")).getAttribute("value"),"abc@yandex.ru");
+        Assert.assertEquals(driver.findElement(By.name("location")).getAttribute("value"),"London");
+
+
+    //  driver.findElement(By.xpath("//div[@id='root']//div[@id='layout']//main//div[@class='data-model-container sidebar-show']//div[@class='content items-tab']//div[@class='active tab ui']//div[@class='container-with-side-buttons']//div[@class='main entities-tab']//div[@class='ui segment active tab']//div[@class='SplitPane  vertical ']//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][3]//div[@class='content']//div[@class='equal width fields'][4]//div[@class='field'][1]//div[@class='ui fluid selection dropdown']//i[@class='dropdown icon']")).click();
+     // driver.findElement(By.xpath("//div[@id='root']//div[@id='layout']//main//div[@class='data-model-container sidebar-show']//div[@class='content items-tab']//div[@class='active tab ui']//div[@class='container-with-side-buttons']//div[@class='main entities-tab']//div[@class='ui segment active tab']//div[@class='SplitPane  vertical ']//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][3]//div[@class='content']//div[@class='equal width fields'][4]//div[@class='field'][1]//div[@class='ui active visible fluid selection dropdown']//div[@class='visible menu transition']//div[@class='selected item'][1]")).click();
+
+
+      //driver.findElement(By.xpath("//div[@id='root']//div[@id='layout']//main//div[@class='data-model-container sidebar-show']//div[@class='content items-tab']//div[@class='active tab ui']//div[@class='container-with-side-buttons']//div[@class='main entities-tab']//div[@class='ui segment active tab']//div[@class='SplitPane  vertical ']//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][3]//div[@class='content']//div[@class='equal width fields'][4]//div[@class='field'][2]//div[@class='ui fluid selection dropdown']//i[@class='dropdown icon']")).click();
+
+       //river.findElement(By.xpath("//div[@id='root']//div[@id='layout']//main//div[@class='data-model-container sidebar-show']//div[@class='content items-tab']//div[@class='active tab ui']//div[@class='container-with-side-buttons']//div[@class='main entities-tab']//div[@class='ui segment active tab']//div[@class='SplitPane  vertical ']//div[@class='Pane vertical Pane2  ']//div[@class='entity-business-glossary']//form[@class='ui form']//div[@class='ui card panel collapse-panel'][3]//div[@class='content']//div[@class='equal width fields'][4]//div[@class='field'][2]//div[@class='ui active visible fluid selection dropdown']//div[@class='visible menu transition']//div[@class='selected item'][1]")).click();
+
+        Assert.assertEquals(driver.findElement(By.name("businessFunc")).getAttribute("value"),"QA test");
+
+
+
+
+
+
+
+
+
+
+//порверим что стало для testcoded_
+
+        driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
+        driver.findElement(By.xpath("//*[text()='codedtest" + str + "']")).click();
+//        Assert.assertEquals(driver.findElement(By.name("displayName")).getAttribute("value"), "codedtest" + str);
+        Assert.assertEquals(driver.findElement(By.name("definition")).getAttribute("value"), "codedtest" + str);
+        Assert.assertEquals(driver.findElement(By.name("example")).getAttribute("value"), "codedtest" + str);
+        Assert.assertEquals(driver.findElement(By.name("acronym")).getAttribute("value"), "codedtest" + str);
     }
 
 
     @Test
-    @Ignore
-    public void WDeletenewLookupTest() {
+
+    public void D() {
+//DeletenewLookupTes
 
         //       driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][5]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
         //      driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
@@ -340,6 +399,15 @@ public class LookupTest {
         WebElement deleteButton = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='hider']/div[@class='to-hide']/div[@class='sidebar-bottom']/button[4]")));
         deleteButton.click();
         driver.findElement(By.xpath("//div[@class='ui tiny modal transition visible active custom-confirm']/div[@class='actions']/button[@class='ui primary button']")).click();
+        //проверить всплывающее окно с инфо об удалении
+
+        String alertText = "";
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-popup")));
+        WebElement toast1 = driver.findElement(By.className("notification-popup"));
+        alertText = toast1.getText();
+        System.out.println(alertText);
+        Assert.assertEquals("Data is deleted!", alertText);
 
 
     }

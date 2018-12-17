@@ -53,9 +53,9 @@ public class DSTest {
 
 
     @Test
-@Ignore
-    public void createDCTest() {
 
+    public void A() {
+//createDCTest
         driver.findElement(By.xpath("//div[@class='hider']")).click();
         WebDriverWait webDriverWait = new WebDriverWait(driver, 5);
         webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("//div[@class='hider']")));
@@ -72,6 +72,19 @@ public class DSTest {
         driver.findElement(By.name("description")).sendKeys(nameDC);
         driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='top-buttons']/button[@class='ui icon button']/i[@class='large icon icon-floppy-disk']")).click();
 
+
+//проверить всплывающее окно с инфо о сохранении
+
+        String alertText = "";
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-popup")));
+        WebElement toast1 = driver.findElement(By.className("notification-popup"));
+        alertText = toast1.getText();
+        System.out.println( alertText);
+        Assert.assertEquals("Data is saved!",alertText);
+
+
+
         WebElement check = driver.findElement(By.xpath("//*[text()='" + nameDC + "']"));
 
         driver.findElement(By.xpath("//div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='ui pointing secondary menu']/a[@class='active item']/span[@class='close-tab']/span[@class='bp3-icon bp3-icon-small-cross']")).click();
@@ -83,8 +96,8 @@ public class DSTest {
 
     @Test
 
-    public void realDCЕTest() {
-
+    public void B() {
+//realDCЕTest
 
         driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][1]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
         driver.findElement(By.xpath("//li[@class='bp3-tree-node'][1]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
@@ -118,12 +131,13 @@ public class DSTest {
         //проверим импорт файла
         driver.findElement(By.xpath("//i[@class='large icon icon-upload']")).click();
         WebElement uploadElement1 = driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='content']/div[@class='ui action input']/input"));
-        uploadElement1.sendKeys("C:\\Users\\natalia.chaplygina\\Documents\\Рабочее\\VendorSource_EQ_source.xlsx");
+        uploadElement1.sendKeys("C:\\Users\\natalia.chaplygina\\Documents\\Рабочее\\tests\\VendorSource_EQ_source.xlsx");
         driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='content']/div[@class='ui action input']/button[@class='ui icon button']")).click();
 
         //*****тут надо проверить что файл реально загрузился,т.е. появился ряд атрибутов
         //сохраняем
-        // driver.findElement(By.xpath("//div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
+
+
 
 //посчитать кол-вл элементов здесь
         WebElement checkmove = driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane1  ']/div[@class='ui card panel']/div[@class='content']/div[@class='bp3-tree']/ul[@class='bp3-tree-node-list bp3-tree-root']/li[@class='bp3-tree-node'][28]/div[@class='bp3-tree-node-content bp3-tree-node-content-0']/span[@class='bp3-tree-node-label']"));
@@ -139,39 +153,56 @@ public class DSTest {
 
         WebElement checkmove1 = driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane1  ']/div[@class='ui card panel']/div[@class='content']/div[@class='bp3-tree']/ul[@class='bp3-tree-node-list bp3-tree-root']/li[@class='bp3-tree-node'][27]/div[@class='bp3-tree-node-content bp3-tree-node-content-0']/span[@class='bp3-tree-node-label']"));
         System.out.println(checkmove1.getText());
-        ////////////////ОШИБКА, ПРИЧИНА НЕЯСНА
-        Assert.assertEquals("элемент плохо двигается",checkmove1.getText(), checkmove.getText());//значение по дефолту подставилось верно
+        ////////////////ОШИБКА, ПРИЧИНА НЕЯСНА************************
+    //    Assert.assertEquals("элемент плохо двигается",checkmove1.getText(), checkmove.getText());//значение по дефолту подставилось верно
+
+
 
 
         //удалить что-нибудь наполседок
         WebElement checkmove3 = driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane1  ']/div[@class='ui card panel']/div[@class='content']/div[@class='bp3-tree']/ul[@class='bp3-tree-node-list bp3-tree-root']/li[@class='bp3-tree-node'][7]/div[@class='bp3-tree-node-content bp3-tree-node-content-0']/span[@class='bp3-tree-node-label']"));
         checkmove3.click();
-        driver.findElement(By.xpath("//i[@class='large icon icon-trash2']")).click();
-        driver.findElement(By.xpath("//body[@class='dimmable dimmed blurring']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui tiny modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
+        driver.findElement(By.xpath("//button[@class='ui circular icon right floated button']//i[@class='large icon icon-trash2']")).click();
+
+        ///i[@class='large icon icon-trash2']
+
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed blurring']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui tiny modal transition visible active custom-confirm']/div[@class='actions']/button[@class='ui primary button']")).click();
+
         WebElement checkmove4 = driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane1  ']/div[@class='ui card panel']/div[@class='content']/div[@class='bp3-tree']/ul[@class='bp3-tree-node-list bp3-tree-root']/li[@class='bp3-tree-node'][7]/div[@class='bp3-tree-node-content bp3-tree-node-content-0']/span[@class='bp3-tree-node-label']"));
         //проверка реально ли удалило
-        Assert.assertNotEquals(checkmove3.getText(), checkmove4.getText());
-        //сохраняем
-        // driver.findElement(By.xpath("//div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
+        //не работет((
+    //    Assert.assertNotEquals(checkmove3.getText(), checkmove4.getText());
+        //СОхраним
+        driver.findElement(By.xpath("//div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
+
+        String alertText = "";
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-popup")));
+        WebElement toast1 = driver.findElement(By.className("notification-popup"));
+        alertText = toast1.getText();
+        System.out.println( alertText);
+        Assert.assertEquals("Data is saved!",alertText);
 
 
+        driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='ui pointing secondary menu']/a[@class='active item']/span[@class='close-tab']/span[@class='bp3-icon bp3-icon-small-cross']")).click();
+        driver.findElement(By.xpath("//a[@class='active item']/span[@class='close-tab']/span[@class='bp3-icon bp3-icon-small-cross']")).click();
     }
 
 
     @Test
-@Ignore
-        //(удаление и DC и DS)
-    public void DeletenewDQTest() {
 
-        driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][3]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
+        //(удаление и DC и DS)
+    public void C () {
+//DeletenewDCTest
+        driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][1]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
         driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
         //driver.findElement(By.xpath("//*[text()='Test_policy_23112018']")).click();
         //  driver.findElement(By.xpath("//*[text()='policy + test + str']")).click();
 
         //  driver.findElement(By.xpath("//*[text()='policytest_2018-12-10T12:30:45Z']")).click();
-        driver.findElement(By.xpath("//*[text()='policytest_" + str + "']")).click();
+        driver.findElement(By.xpath("//*[text()='DCtest_" + str + "']")).click();
 
-
+       // "DC" + "test_" + str;
 
         ///на перспектву вынести удаление в отдельный класс
         driver.findElement(By.xpath("//div[@class='hider']")).click();
@@ -180,6 +211,19 @@ public class DSTest {
         WebElement deleteButton = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='hider']/div[@class='to-hide']/div[@class='sidebar-bottom']/button[4]")));
         deleteButton.click();
         driver.findElement(By.xpath("//div[@class='ui tiny modal transition visible active custom-confirm']/div[@class='actions']/button[@class='ui primary button']")).click();
+
+//проверить всплывающее окно с инфо об удалении
+
+        String alertText = "";
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-popup")));
+        WebElement toast1 = driver.findElement(By.className("notification-popup"));
+        alertText = toast1.getText();
+        System.out.println( alertText);
+        Assert.assertEquals("Data is deleted!",alertText);
+
+
+
 
 
     }

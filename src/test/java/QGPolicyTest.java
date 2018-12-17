@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.junit.FixMethodOrder;
+import org.junit.rules.TestName;
+import org.junit.runners.MethodSorters;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -50,9 +53,34 @@ public class QGPolicyTest {
         loginButton.click();
     }
 
+
+    @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+    public class ExecutionOrderTest {
+
+        @Test
+        public void ACreatenewDQTest() {
+
+        }
+
+        @Test
+        public void BrealDQTest() {
+
+        }
+
+        @Test
+        public void DeletenewDQTest() {
+
+        }
+
+    };
+
+
+
+
+
     @Test
 
-    public void CreatenewDQTest() {
+    public void ACreatenewDQTest() {
         //create dq policy
 
 
@@ -96,7 +124,6 @@ public class QGPolicyTest {
         driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons dq-policy']/div[@class='main']/div[@class='ui segment']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane2  ']/div/div[@class='ui card panel collapse-panel']/div[@class='content']/div[3]/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group'][10]/div[@class='rt-tr un-dq-rule-system -even']/div[@class='rt-td'][1]")).click();
 
 
-
         //assigned rules only
 
         driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons dq-policy']/div[@class='main']/div[@class='ui segment']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane2  ']/div/div[@class='ui card panel collapse-panel']/div[@class='content']/div[@class='ui toggle checkbox']")).click();
@@ -107,18 +134,51 @@ public class QGPolicyTest {
         //   driver.findElement(By.xpath("//body[@class='dimmable dimmed blurring']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui tiny modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
 
         //сохраняем
-      //  driver.findElement(By.xpath("// div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons dq-policy']/div[@class='top-buttons']/button[@class='ui icon button']/i[@class='large icon icon-floppy-disk']")).click();
+        //  driver.findElement(By.xpath("// div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons dq-policy']/div[@class='top-buttons']/button[@class='ui icon button']/i[@class='large icon icon-floppy-disk']")).click();
 
         //а теперь проверим что значения реально сохранились// подумать про закрыыть вкладку, открыть  потом проверить или полсе эскпорта
-        Assert.assertEquals("policy" + "test_" + str,  DQname.getAttribute("value"));
+        Assert.assertEquals("policy" + "test_" + str, DQname.getAttribute("value"));
         Assert.assertEquals("policy" + "test_" + str, driver.findElement(By.name("name")).getAttribute("value"));
-        Assert.assertEquals("listallinstrumentswherecountry of inc=''orcountry of inc=''",driver.findElement(By.xpath("//div[@class='hwt-container']/textarea[@class='antlr-input hwt-input hwt-content']")).getAttribute("value"));
+        Assert.assertEquals("listallinstrumentswherecountry of inc=''orcountry of inc=''", driver.findElement(By.xpath("//div[@class='hwt-container']/textarea[@class='antlr-input hwt-input hwt-content']")).getAttribute("value"));
 
         //сохраняем
         driver.findElement(By.xpath("// div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons dq-policy']/div[@class='top-buttons']/button[@class='ui icon button']/i[@class='large icon icon-floppy-disk']")).click();
+       //проверка всплывающего окна
+        String alertText = "";
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-popup")));
+        WebElement toast1 = driver.findElement(By.className("notification-popup"));
+        alertText = toast1.getText();
+        System.out.println(alertText);
+        Assert.assertEquals("Data is saved!", alertText);
+
+        driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='ui pointing secondary menu']/a[@class='active item']/span[@class='close-tab']/span[@class='bp3-icon bp3-icon-small-cross']")).click();
+
+    }
+
+
+
+    @Test
+@Ignore
+    public void BrealDQTest() {
+
+        driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][3]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
+        driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
+
+        //  driver.findElement(By.xpath("//*[text()='policytest_2018-12-10T12:30:45Z']")).click();
+        driver.findElement(By.xpath("//*[text()='policytest_" + str + "']")).click();
+
+        //Проверки
+
+        Assert.assertEquals("policy" + "test_" + str, driver.findElement(By.name("displayName")).getAttribute("value"));
+        Assert.assertEquals("policy" + "test_" + str, driver.findElement(By.name("name")).getAttribute("value"));
+        Assert.assertEquals("listallinstrumentswherecountry of inc=''orcountry of inc=''", driver.findElement(By.xpath("//div[@class='hwt-container']/textarea[@class='antlr-input hwt-input hwt-content']")).getAttribute("value"));
+
 
 
     }
+
+
 
     @Test
 
@@ -129,9 +189,8 @@ public class QGPolicyTest {
         //driver.findElement(By.xpath("//*[text()='Test_policy_23112018']")).click();
         //  driver.findElement(By.xpath("//*[text()='policy + test + str']")).click();
 
-      //  driver.findElement(By.xpath("//*[text()='policytest_2018-12-10T12:30:45Z']")).click();
+        //  driver.findElement(By.xpath("//*[text()='policytest_2018-12-10T12:30:45Z']")).click();
         driver.findElement(By.xpath("//*[text()='policytest_" + str + "']")).click();
-
 
 
         ///на перспектву вынести удаление в отдельный класс
@@ -142,21 +201,18 @@ public class QGPolicyTest {
         deleteButton.click();
         driver.findElement(By.xpath("//div[@class='ui tiny modal transition visible active custom-confirm']/div[@class='actions']/button[@class='ui primary button']")).click();
 
+        //проверить всплывающее окно с инфо об удалении
+
+        String alertText = "";
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("notification-popup")));
+        WebElement toast1 = driver.findElement(By.className("notification-popup"));
+        alertText = toast1.getText();
+        System.out.println(alertText);
+        Assert.assertEquals("Data is deleted!", alertText);
+
 
     }
-
-    @Test
-    @Ignore
-    public void realDQTest() {
-
-
-        driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][3]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();
-        driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
-        driver.findElement(By.xpath("//*[text()='Test_policy_23112018']")).click();
-        //   /html/body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons dq-policy']/div[@class='main']/div[@class='ui segment']/div[@class='two-sides']/div[@class='ui card panel collapse-panel'][2]/div[@class='content']/form[@class='ui form']/div[@class='equal width fields'][1]/div[@class='field'][1]/div[@class='ui input']/input
-
-    }
-
 
 
 
