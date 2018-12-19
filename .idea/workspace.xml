@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/NestedAttr.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="uitest.iws" />
@@ -731,7 +730,13 @@
       <option name="project" value="LOCAL" />
       <updated>1545058663671</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="class for nested attribute">
+      <created>1545231333338</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545231333338</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -812,7 +817,8 @@
     <MESSAGE value="add a  ittle checks for lookup" />
     <MESSAGE value="add creation direcoty for export/import model" />
     <MESSAGE value="popup window" />
-    <option name="LAST_COMMIT_MESSAGE" value="popup window" />
+    <MESSAGE value="class for nested attribute" />
+    <option name="LAST_COMMIT_MESSAGE" value="class for nested attribute" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
