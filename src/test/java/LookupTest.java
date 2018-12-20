@@ -337,6 +337,7 @@ public class LookupTest {
         //проверяем Synonyms:
 
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][9]/div[@class='field']/div[@class='entity-synonyms']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][1]/div[@class='ui fluid selection dropdown']")).getText(),"SSS");
+      //ошибка
         Assert.assertEquals(driver.findElement(By.xpath("//div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][9]/div[@class='field']/div[@class='entity-synonyms']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div[@class='ui input']")).getText(),"asdasd");
 
 

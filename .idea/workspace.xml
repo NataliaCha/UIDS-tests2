@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/VendorSource_EQ_1_volume.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Jobs.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LookupTest.java" afterPath="$PROJECT_DIR$/src/test/java/LookupTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/NestedAttr.java" afterPath="$PROJECT_DIR$/src/test/java/NestedAttr.java" />
     </list>
     <ignored path="uitest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,21 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FirstTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/FirstTest.java">
+      <file leaf-file-name="Jobs.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Jobs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="210" column="245" selection-start-line="210" selection-start-column="245" selection-end-line="210" selection-end-column="257" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NestedAttr.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NestedAttr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8333333">
-              <caret line="349" column="84" selection-start-line="349" selection-start-column="84" selection-end-line="349" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.48380566">
+              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -48,12 +43,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LookupTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/LookupTest.java">
+      <file leaf-file-name="NestedAttr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/NestedAttr.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="298" column="0" selection-start-line="217" selection-start-column="8" selection-end-line="298" selection-end-column="0" />
+              <caret line="102" column="58" selection-start-line="100" selection-start-column="6" selection-end-line="107" selection-end-column="57" />
               <folding>
+                <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -84,8 +80,9 @@
         <option value="$PROJECT_DIR$/src/test/java/FirstTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/QGPolicyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/DSTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LookupTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/NestedAttr.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LookupTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Jobs.java" />
       </list>
     </option>
   </component>
@@ -239,15 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="tmp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,7 +265,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="JUnit.NestedAttr">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\natalia.chaplygina\UIDS-tests2\tmp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Jobs">
     <configuration default="false" name="LookupTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="uitest" />
@@ -286,27 +280,6 @@
       <option name="MAIN_CLASS_NAME" value="LookupTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="LookupTest.AcreateLookUpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="uitest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LookupTest" />
-      <option name="METHOD_NAME" value="AcreateLookUpTest" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -340,13 +313,13 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="NestedAttr.A" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="LookupTest.A" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="uitest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NestedAttr" />
+      <option name="MAIN_CLASS_NAME" value="LookupTest" />
       <option name="METHOD_NAME" value="A" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -361,13 +334,34 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="NestedAttr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="QGPolicyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="uitest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NestedAttr" />
+      <option name="MAIN_CLASS_NAME" value="QGPolicyTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Jobs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="uitest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Jobs" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -662,18 +656,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.LookupTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LookupTest.AcreateLookUpTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.DSTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NestedAttr.A" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.NestedAttr" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.DSTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.LookupTest.A" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Jobs" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.NestedAttr" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NestedAttr.A" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Jobs" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.LookupTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DSTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LookupTest.AcreateLookUpTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LookupTest.A" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DSTest" />
       </list>
     </recent_temporary>
   </component>
@@ -736,39 +730,45 @@
       <option name="project" value="LOCAL" />
       <updated>1545231333338</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="class for nested attribute">
+      <created>1545231339419</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545231339419</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NestedAttr - 2018.12.19 at 16h 46m 15s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 15h 34m 50s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 16h 48m 34s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 15h 39m 23s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 17h 14m 14s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 15h 58m 19s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 17h 27m 29s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 16h 11m 02s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 17h 28m 19s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 16h 15m 19s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 17h 36m 56s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 16h 38m 01s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 17h 42m 20s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 16h 41m 20s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 17h 43m 22s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 16h 46m 00s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr - 2018.12.19 at 17h 54m 10s.xml">
-      <configuration name="NestedAttr" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 16h 57m 57s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NestedAttr_A - 2018.12.19 at 16h 16m 05s.xml">
-      <configuration name="NestedAttr.A" configurationId="JUnit" />
+    <history-entry file="Jobs - 2018.12.20 at 16h 58m 36s.xml">
+      <configuration name="Jobs" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -777,12 +777,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34559643" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37346712" sideWeight="0.20948827" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16471216" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.047974415" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2865106" sideWeight="0.7905117" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38907468" sideWeight="0.7905117" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1881663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -790,7 +790,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4180602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4180602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -822,7 +822,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="65" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/NestedAttr.java</url>
+          <line>141</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -835,7 +843,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="210" column="245" selection-start-line="210" selection-start-column="245" selection-end-line="210" selection-end-column="257" />
-          <folding />
+          <folding>
+            <element signature="e#0#15436#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#14861#14862#0" expanded="false" />
+            <element signature="e#14951#14952#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -855,7 +868,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="294" column="57" selection-start-line="284" selection-start-column="5" selection-end-line="294" selection-end-column="57" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -864,6 +877,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -871,7 +887,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#15436#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#14861#14862#0" expanded="false" />
+            <element signature="e#14951#14952#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -887,7 +908,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#15436#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#14861#14862#0" expanded="false" />
+            <element signature="e#14951#14952#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -914,32 +940,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DSTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9425287">
-          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/QGPolicyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.016092">
+        <state vertical-scroll-proportion="-3.4945567">
           <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="210" column="245" selection-start-line="210" selection-start-column="245" selection-end-line="210" selection-end-column="257" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/LookupTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="298" column="0" selection-start-line="217" selection-start-column="8" selection-end-line="298" selection-end-column="0" />
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/DSTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="0" selection-start-line="130" selection-start-column="5" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FirstTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="278" column="29" selection-start-line="266" selection-start-column="0" selection-end-line="278" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -948,8 +978,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/NestedAttr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8333333">
-          <caret line="349" column="84" selection-start-line="349" selection-start-column="84" selection-end-line="349" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="58" selection-start-line="100" selection-start-column="6" selection-end-line="107" selection-end-column="57" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Jobs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48380566">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />

@@ -64,7 +64,12 @@ public class NestedAttr {
         driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
 
 
-        driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+      //  driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+
+        driver.findElement(By.xpath("//*[contains(text(),'Instrument Model')]")).click();
+
+
+
         driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
         Actions builder = new Actions(driver);
         WebElement element = driver.findElement(By.xpath("//div[@class='Pane vertical Pane1  ']/div[@class='ui card panel']/div[@class='content']/div[@class='hider invert']/div[@class='to-hide']/div[@class='attribute-tree-buttons']"));
@@ -132,7 +137,12 @@ public class NestedAttr {
         driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
 
 //ищем созданный в предыдущем тесте
-        driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+      //  driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+
+    driver.findElement(By.xpath("//*[contains(text(),'Instrument Model')]")).click();
+
+
+
         driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
         Actions builder = new Actions(driver);
         WebElement element = driver.findElement(By.xpath("//div[@class='Pane vertical Pane1  ']/div[@class='ui card panel']/div[@class='content']/div[@class='hider invert']/div[@class='to-hide']/div[@class='attribute-tree-buttons']"));
@@ -239,7 +249,10 @@ public class NestedAttr {
         driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
 
 //ищем созданный в предыдущем тесте
-        driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+        //driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+
+        driver.findElement(By.xpath("//*[contains (text(),'Instrument Model')]")).click();
+
         driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
         driver.findElement(By.xpath("//*[text()='nestedattr" + str + "']")).click();
 
@@ -345,7 +358,11 @@ public class NestedAttr {
         driver.findElement(By.xpath("//li[@class='bp3-tree-node']//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-closed']")).click();
 
 
-        driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+       // driver.findElement(By.xpath("//*[text()='Instrument Model']")).click();
+
+
+        driver.findElement(By.xpath("//*[contains(text(),'Instrument Model')]")).click();
+
         driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
         driver.findElement(By.xpath("//*[text()='nestedattr" + str + "']")).click();
 
@@ -373,8 +390,9 @@ public class NestedAttr {
 
         driver.findElement(By.xpath("//div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane2  ']/div[@class='entity-complex-attribute']/form[@class='ui form']/div[@class='ui card panel collapse-panel'][2]/div[@class='content']/div[@class='equal width fields'][5]/div[@class='field']/div[@class='ui fitted checkbox']")).click();
 
-        driver.findElement(By.xpath("//div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
 
+/*
+        driver.findElement(By.xpath("//div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
 
         System.out.println ("нажали сохранить");
         String alertText = "";
@@ -384,8 +402,7 @@ public class NestedAttr {
         alertText = toast1.getText();
         System.out.println(alertText);
         Assert.assertEquals("Data is saved!", alertText);
-
-
+*/
 
         //Проверим,что в relationships все появилось
         WebElement relfrom = driver.findElement(By.xpath("//div[@class='ui segment active tab']/div[@class='SplitPane  vertical ']/div[@class='Pane vertical Pane2  ']/div[@class='entity-complex-attribute']/div[@class='ui card panel collapse-panel']/div[@class='content']/div/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr un-dq-rule-system -odd']/div[@class='rt-td'][1]"));
