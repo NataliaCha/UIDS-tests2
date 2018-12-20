@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/VendorSource_EQ_1_volume.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Jobs.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LookupTest.java" afterPath="$PROJECT_DIR$/src/test/java/LookupTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/NestedAttr.java" afterPath="$PROJECT_DIR$/src/test/java/NestedAttr.java" />
     </list>
     <ignored path="uitest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,8 +28,8 @@
       <file leaf-file-name="Jobs.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Jobs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48380566">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9311741">
+              <caret line="134" column="48" selection-start-line="134" selection-start-column="48" selection-end-line="134" selection-end-column="48" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -736,7 +731,13 @@
       <option name="project" value="LOCAL" />
       <updated>1545231339419</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="class for test jobs">
+      <created>1545314339229</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545314339229</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -773,13 +774,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34559643" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37346712" sideWeight="0.20948827" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4180602" sideWeight="0.2979744" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.047974415" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38907468" sideWeight="0.7905117" order="2" side_tool="false" content_ui="tabs" />
@@ -790,7 +791,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4180602" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4180602" sideWeight="0.7020256" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -818,7 +819,8 @@
     <MESSAGE value="add creation direcoty for export/import model" />
     <MESSAGE value="popup window" />
     <MESSAGE value="class for nested attribute" />
-    <option name="LAST_COMMIT_MESSAGE" value="class for nested attribute" />
+    <MESSAGE value="class for test jobs" />
+    <option name="LAST_COMMIT_MESSAGE" value="class for test jobs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -989,8 +991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Jobs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48380566">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9311741">
+          <caret line="134" column="48" selection-start-line="134" selection-start-column="48" selection-end-line="134" selection-end-column="48" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
