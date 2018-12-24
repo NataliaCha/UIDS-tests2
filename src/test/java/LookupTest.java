@@ -383,7 +383,7 @@ public class LookupTest {
 
 
     @Test
-
+@Ignore
     public void D() {
 //DeletenewLookupTes
 

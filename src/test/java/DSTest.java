@@ -190,6 +190,7 @@ public class DSTest {
 
 
     @Test
+    @Ignore
 
         //(удаление и DC и DS)
     public void C () {
