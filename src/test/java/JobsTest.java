@@ -58,7 +58,8 @@ public class JobsTest {
             file.mkdir();
         }
 
-        System.setProperty("webdriver.chrome.driver", "C:/Users/natalia.chaplygina/chromedriver/chromedriver.exe");
+        String driverepath = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", driverepath+"\\tmp\\chromedriver.exe");
         String downloadFilepath = System.getProperty("user.dir");
         System.out.println(downloadFilepath);
         downloadFilepath = downloadFilepath + "\\mydownloads";

@@ -40,7 +40,8 @@ public class LookupTest {
     @BeforeClass
 
     public static void setup() {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/natalia.chaplygina/chromedriver/chromedriver.exe");
+        String driverepath = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", driverepath+"\\tmp\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
