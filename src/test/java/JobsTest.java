@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class Jobs {
+public class JobsTest {
 
     //http://prototype.datasynthes.com/synthes-frontend/operational-metadata
 

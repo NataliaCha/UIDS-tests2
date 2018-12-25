@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/Jobs.java" afterPath="$PROJECT_DIR$/src/test/java/JobsTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/DSTest.java" afterPath="$PROJECT_DIR$/src/test/java/DSTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Jobs.java" afterPath="$PROJECT_DIR$/src/test/java/Jobs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/LookupTest.java" afterPath="$PROJECT_DIR$/src/test/java/LookupTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="uitest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,17 +27,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Jobs.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Jobs.java">
+      <file leaf-file-name="JobsTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/JobsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4696707">
-              <caret line="373" column="51" selection-start-line="373" selection-start-column="51" selection-end-line="373" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#26485#26708#0" expanded="true" />
-                <element signature="e#26707#26708#0" expanded="true" />
+                <element signature="e#26489#26712#0" expanded="true" />
+                <element signature="e#26711#26712#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.09255898">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,13 +85,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/FirstTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/QGPolicyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/NestedAttr.java" />
         <option value="$PROJECT_DIR$/src/test/java/LookupTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/DSTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Jobs.java" />
+        <option value="$PROJECT_DIR$/src/test/java/JobsTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -292,7 +302,7 @@
       <recent name="C:\Users\natalia.chaplygina\UIDS-tests2\tmp" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Jobs">
+  <component name="RunManager" selected="JUnit.JobsTest">
     <configuration default="false" name="LookupTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="uitest" />
@@ -356,13 +366,13 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Jobs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="JobsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="uitest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Jobs" />
+      <option name="MAIN_CLASS_NAME" value="JobsTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -377,13 +387,13 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Jobs.A" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="JobsTest.A" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="uitest" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Jobs" />
+      <option name="MAIN_CLASS_NAME" value="JobsTest" />
       <option name="METHOD_NAME" value="A" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -680,13 +690,13 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.LookupTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.DSTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Jobs" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Jobs.A" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.JobsTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JobsTest.A" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Jobs" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Jobs.A" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JobsTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JobsTest.A" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.DSTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.LookupTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.QGPolicyTest" />
@@ -776,7 +786,13 @@
       <option name="project" value="LOCAL" />
       <updated>1545645515401</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="class for test jobs (+large file and download in local direcory)">
+      <created>1545656234049</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1545656234049</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -820,7 +836,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34559643" sideWeight="0.4445629" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32552955" sideWeight="0.27345416" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.047974415" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21162046" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32552955" sideWeight="0.7265459" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -859,7 +875,8 @@
     <MESSAGE value="popup window" />
     <MESSAGE value="class for nested attribute" />
     <MESSAGE value="class for test jobs" />
-    <option name="LAST_COMMIT_MESSAGE" value="class for test jobs" />
+    <MESSAGE value="class for test jobs (+large file and download in local direcory)" />
+    <option name="LAST_COMMIT_MESSAGE" value="class for test jobs (+large file and download in local direcory)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -958,14 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1439252">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.14.0/selenium-remote-driver-3.14.0-sources.jar!/org/openqa/selenium/remote/service/DriverCommandExecutor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4848485">
@@ -1026,16 +1035,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Jobs.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/JobsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4696707">
-          <caret line="373" column="51" selection-start-line="373" selection-start-column="51" selection-end-line="373" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#26485#26708#0" expanded="true" />
-            <element signature="e#26707#26708#0" expanded="true" />
+            <element signature="e#26489#26712#0" expanded="true" />
+            <element signature="e#26711#26712#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09255898">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
