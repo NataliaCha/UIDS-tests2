@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/CustomPropTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/NestedAttrTest.java" afterPath="$PROJECT_DIR$/src/test/java/NestedAttrTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/CustomPropTest.java" afterPath="$PROJECT_DIR$/src/test/java/CustomPropTest.java" />
     </list>
     <ignored path="uitest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +29,10 @@
       <file leaf-file-name="CustomPropTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CustomPropTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76884425">
-              <caret line="27" column="25" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.34505862">
+              <caret line="138" column="56" selection-start-line="138" selection-start-column="56" selection-end-line="138" selection-end-column="56" />
               <folding>
-                <element signature="e#0#9994#0" expanded="true" />
+                <element signature="e#0#12734#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -744,25 +743,16 @@
       <option name="project" value="LOCAL" />
       <updated>1545745585105</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="+ class CustomPropTest">
+      <created>1545822788345</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1545822788345</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomPropTest - 2018.12.26 at 13h 32m 03s.xml">
-      <configuration name="CustomPropTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomPropTest - 2018.12.26 at 13h 37m 12s.xml">
-      <configuration name="CustomPropTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomPropTest - 2018.12.26 at 13h 42m 58s.xml">
-      <configuration name="CustomPropTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomPropTest - 2018.12.26 at 13h 43m 39s.xml">
-      <configuration name="CustomPropTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomPropTest - 2018.12.26 at 13h 48m 18s.xml">
-      <configuration name="CustomPropTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CustomPropTest - 2018.12.26 at 13h 52m 46s.xml">
       <configuration name="CustomPropTest" configurationId="JUnit" />
     </history-entry>
@@ -776,6 +766,21 @@
       <configuration name="CustomPropTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CustomPropTest - 2018.12.26 at 14h 10m 40s.xml">
+      <configuration name="CustomPropTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomPropTest - 2018.12.26 at 14h 37m 17s.xml">
+      <configuration name="CustomPropTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomPropTest - 2018.12.26 at 14h 39m 56s.xml">
+      <configuration name="CustomPropTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomPropTest - 2018.12.26 at 16h 08m 49s.xml">
+      <configuration name="CustomPropTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomPropTest - 2018.12.26 at 16h 58m 24s.xml">
+      <configuration name="CustomPropTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomPropTest - 2018.12.26 at 17h 00m 42s.xml">
       <configuration name="CustomPropTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -839,7 +844,8 @@
     <MESSAGE value="class for test jobs (+large file and download in local direcory)" />
     <MESSAGE value="+ maven plugin for tests" />
     <MESSAGE value="+ chromedriver is included in project" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ chromedriver is included in project" />
+    <MESSAGE value="+ class CustomPropTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ class CustomPropTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -870,8 +876,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -998,18 +1004,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CustomPropTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76884425">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.34505862">
+          <caret line="138" column="56" selection-start-line="138" selection-start-column="56" selection-end-line="138" selection-end-column="56" />
           <folding>
-            <element signature="e#0#9994#0" expanded="true" />
+            <element signature="e#0#12734#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

@@ -120,7 +120,37 @@ public class CustomPropTest {
         Assert.assertTrue(textprops1.contains("two"));
 
         ///изменим имя
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div")).clear();
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div")).sendKeys("three");
+        driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
 
+        //проверим что имя поменялось
+
+
+        driver.findElement(By.xpath("//*[text()='Unique Security Identifier']")).click();
+
+        driver.findElement(By.xpath("//div[@class='ui card panel collapse-panel'][4]/div[@class='header header']/a[@class='setting-button']/i[@class='setting big icon']")).click();
+        WebElement props2 = driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']"));
+
+        String textprops2 = props2.getText();
+           System.out.println(textprops);
+        Assert.assertFalse(textprops2.contains("two"));
+        Assert.assertFalse(textprops2.contains("one"));
+        Assert.assertTrue(textprops2.contains("three"));
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/i[@class='close icon']")).click();
+//сохранить
+        driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
+       //удалить
+
+
+
+
+
+
+
+
+     //   driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
 
     }
+
 }
