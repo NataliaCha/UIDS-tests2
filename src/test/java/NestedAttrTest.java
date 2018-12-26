@@ -431,4 +431,10 @@ public class NestedAttrTest {
         driver.findElement(By.xpath("//div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='ui pointing secondary menu']/a[@class='active item']/span[@class='close-tab']/span[@class='bp3-icon bp3-icon-small-cross']")).click();
     }
 
+
+    //Добавить тесты на движение вверх/вниз
+
+
+
+
 }
