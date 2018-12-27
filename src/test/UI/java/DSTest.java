@@ -109,8 +109,9 @@ public class DSTest {
 
 
         driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='top-buttons']/button[@class='ui icon button'][2]/i[@class='large icon icon-plus']")).click();
-        driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div/div[@class='ui card panel collapse-panel']/div[@class='content']/form[@class='ui form']/div[@class='equal width fields'][1]/div[@class='field']/div[@class='ui input']/input")).sendKeys("DS" + str);
-        driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div/div[@class='ui card panel collapse-panel']/div[@class='content']/form[@class='ui form']/div[@class='equal width fields'][2]/div[@class='field']/div[@class='ui input']/input")).sendKeys("DS" + str);
+
+        driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div/div[@class='ui card panel collapse-panel'][2]/div[@class='content']/form[@class='ui form']/div[@class='equal width fields'][1]/div[@class='field']/div[@class='ui input']/input")).sendKeys("DS" + str);
+        driver.findElement(By.xpath("//div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div/div[@class='ui card panel collapse-panel'][2]/div[@class='content']/form[@class='ui form']/div[@class='equal width fields'][2]/div[@class='field']/div[@class='ui input']/input")).sendKeys("DS" + str);
 
         //сохраняем
         // driver.findElement(By.xpath("//div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
@@ -192,7 +193,7 @@ public class DSTest {
 
 
     @Test
-    @Ignore
+  @Ignore
 
         //(удаление и DC и DS)
     public void C () {
