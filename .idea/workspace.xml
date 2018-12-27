@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_rest_assured_json_path_3_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_rest_assured_rest_assured_3_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_rest_assured_rest_assured_common_3_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_rest_assured_xml_path_3_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ccil_cowan_tagsoup_tagsoup_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_json_2_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_xml_2_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/Back/java/First_Api.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/Back/java/Second_Api.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/CustomPropTest.java" afterPath="$PROJECT_DIR$/src/test/UI/java/CustomPropTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/DSTest.java" afterPath="$PROJECT_DIR$/src/test/UI/java/DSTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" afterPath="$PROJECT_DIR$/src/test/UI/java/FirstTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/JobsTest.java" afterPath="$PROJECT_DIR$/src/test/UI/java/JobsTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/LookupTest.java" afterPath="$PROJECT_DIR$/src/test/UI/java/LookupTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/NestedAttrTest.java" afterPath="$PROJECT_DIR$/src/test/UI/java/NestedAttrTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/QGPolicyTest.java" afterPath="$PROJECT_DIR$/src/test/UI/java/QGPolicyTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uitest.iml" afterPath="$PROJECT_DIR$/uitest.iml" />
     </list>
     <ignored path="uitest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -849,7 +825,13 @@
       <option name="project" value="LOCAL" />
       <updated>1545835863069</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="+ bact test (">
+      <created>1545921730823</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1545921730823</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -946,7 +928,8 @@
     <MESSAGE value="+ chromedriver is included in project" />
     <MESSAGE value="+ class CustomPropTest" />
     <MESSAGE value="+ class CustomPropTest_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ class CustomPropTest_2" />
+    <MESSAGE value="+ bact test (" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ bact test (" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
