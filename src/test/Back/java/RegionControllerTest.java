@@ -3,6 +3,7 @@
  */
 
 
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -58,12 +59,12 @@ public class RegionControllerTest {
                 then().
                 assertThat().
                 statusCode(200).
-               body(containsString("EMEA")).body(containsString("AMER")).body(containsString("APAC"));
-               // body(hasValue("AMER","APAC"));
+                body(containsString("EMEA")).body(containsString("AMER")).body(containsString("APAC"));
+        // body(hasValue("AMER","APAC"));
 
 
         // hasItems(23, 54));
-      //  .getBody().print();
+        //  .getBody().print();
     }
 
 
@@ -75,15 +76,24 @@ public class RegionControllerTest {
                 when().
                 get("http://prototype.datasynthes.com/api/v1/regions").
                 then().
-               assertThat().
-               statusCode(200).
-               body(containsString("APAC"));
+                assertThat().
+                statusCode(200).
+                body(containsString("APAC"));
         //  .getBody().print();
     }
 
+/*
+    public void v1() {
+        given().
+                header("authorization", token).
+                when().
+                get("http://prototype.datasynthes.com/api/v2/api-docs?group=v1").
+                then().
 
 
 
+*/
 
 
 }
+
