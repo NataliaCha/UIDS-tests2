@@ -1,6 +1,7 @@
 /**
- * Created by natalia.chaplygina on 11.01.2019.
+ * Created by natalia.chaplygina on 14.01.2019.
  */
+
 
 
 import io.restassured.RestAssured;
@@ -18,11 +19,8 @@ import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.hasValue;
 
+public class SynonymControllerTest {
 
-
-
-
-public class CategoryControllerTest {
 
     static String token;
 
@@ -50,36 +48,43 @@ public class CategoryControllerTest {
         token = token2;
 
     }
-    @Test
-    public void getCategoryTest() {
-        given()
-                .header("authorization", token)
-                .when()
-                .get("http://prototype.datasynthes.com/api/v1/categories")
-                .then()
-                .assertThat()
-                .statusCode(200)
-                .body(containsString("Issue")).body(containsString("Issue Classification")).body(containsString("Other"));
-        // body(hasValue("AMER","APAC"));
 
+        @Test
+        public void getSynonimTest() {
+            given()
+                    .header("authorization", token)
+                    .when()
+                    .get("http://prototype.datasynthes.com/api/v1/synonyms")
+                    .then()
+                    .assertThat()
+                    .statusCode(200)
+                    .body(containsString("ADA")).body(containsString("SSS")).body(containsString("BDD"));
 
-        // hasItems(23, 54));
-        //  .getBody().print();
-    }
+        }
 
 
 
     @Test
-    public void getCategorybyidTest() {
+    public void getSynonimbyidTest() {
         given()
                 .header("authorization", token)
-                .pathParam("id","5bfbfcc8feb5bb6b20a12be1")
+                .pathParam("id", "5bfbfcc8feb5bb6b20a12bde")
                 .when()
-                .get("http://prototype.datasynthes.com/api/v1/categories/{id}")
+                .get("http://prototype.datasynthes.com/api/v1/synonyms/{id}")
                 .then()
                 .assertThat()
                 .statusCode(200)
-                .body(containsString("Issue Classification"));
+                .body(containsString("SSS"));
         //  .getBody().print();
+
     }
-}
+
+
+
+    }
+
+
+
+
+
+

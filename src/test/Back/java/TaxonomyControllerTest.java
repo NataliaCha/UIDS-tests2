@@ -1,5 +1,5 @@
 /**
- * Created by natalia.chaplygina on 11.01.2019.
+ * Created by natalia.chaplygina on 14.01.2019.
  */
 
 
@@ -19,10 +19,8 @@ import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.hasValue;
 
 
+public class TaxonomyControllerTest {
 
-
-
-public class CategoryControllerTest {
 
     static String token;
 
@@ -51,35 +49,52 @@ public class CategoryControllerTest {
 
     }
     @Test
-    public void getCategoryTest() {
+    public void getTaxonomyTest() {
         given()
                 .header("authorization", token)
                 .when()
-                .get("http://prototype.datasynthes.com/api/v1/categories")
+                .get("http://prototype.datasynthes.com/api/v1/taxonomies")
                 .then()
                 .assertThat()
                 .statusCode(200)
-                .body(containsString("Issue")).body(containsString("Issue Classification")).body(containsString("Other"));
-        // body(hasValue("AMER","APAC"));
+                .body(containsString("\"group\":\"Risk\",\"name\":\"Low\"")).body(containsString("\"group\":\"Risk\",\"name\":\"Medium\"")).body(containsString("\"group\":\"Risk\",\"name\":\"High\""))
+                .body(containsString("\"group\":\"Trading\",\"name\":\"Not Specified\""))
+                .body(containsString("\"group\":\"Accounting\",\"name\":\"Liability\"")).body(containsString("\"group\":\"Accounting\",\"name\":\"Asset\""))
+                .body(containsString("\"group\":\"Accounting\",\"name\":\"Equity\"")).body(containsString("\"group\":\"Accounting\",\"name\":\"Revenue\"")).body(containsString("\"group\":\"Accounting\",\"name\":\"Expense\""));
 
 
-        // hasItems(23, 54));
-        //  .getBody().print();
+
+
     }
 
 
 
     @Test
-    public void getCategorybyidTest() {
+    public void getTaxonomybyidTest() {
         given()
                 .header("authorization", token)
-                .pathParam("id","5bfbfcc8feb5bb6b20a12be1")
+                .pathParam("id", "5bfd0bddfeb5bb2a7cb7e975")
                 .when()
-                .get("http://prototype.datasynthes.com/api/v1/categories/{id}")
+                .get("http://prototype.datasynthes.com/api/v1/taxonomies/{id}")
                 .then()
                 .assertThat()
                 .statusCode(200)
-                .body(containsString("Issue Classification"));
+                .body(containsString("\"group\":\"Accounting\",\"name\":\"Expense\""));
         //  .getBody().print();
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
