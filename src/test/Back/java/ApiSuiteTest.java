@@ -4,12 +4,14 @@
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-//public class ApiTestSuite {
+import org.junit.runners.Suite.SuiteClasses;
+
+//public class ApiSuiteTest {
 
 
     @RunWith(Suite.class)
     @Suite.SuiteClasses({CategoryControllerTest.class, LookupEntryControllerTest.class,RegionControllerTest.class, SynonymControllerTest.class,TaxonomyControllerTest.class} )
-    public class ApiTestSuite {
+    public class ApiSuiteTest {
 
     }
 
