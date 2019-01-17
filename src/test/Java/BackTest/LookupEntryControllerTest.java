@@ -86,9 +86,12 @@ public class LookupEntryControllerTest {
 
         // First get the JsonPath object instance from the Response interface
         JsonPath response2 = response.jsonPath();
-        System.out.println (response2.get("content"));
-        System.out.println (response2.get("type"));
-        System.out.println (response2.get( "$..type"));
+
+        ///не понятн почему не работает
+
+        //   System.out.println (response2.get("content"));
+      //  System.out.println (response2.get("type"));
+      //  System.out.println (response2.get( "$..type"));
 
 
 
