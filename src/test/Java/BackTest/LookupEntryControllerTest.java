@@ -13,6 +13,11 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 
@@ -141,7 +146,7 @@ public class LookupEntryControllerTest {
 
 
     @Test
-
+@Ignore
     public void lookupsbytypeTest_Contry() {
         // String con=
         given()
@@ -163,7 +168,7 @@ public class LookupEntryControllerTest {
 
     }
     @Test
-
+    @Ignore
     public void lookupsbytypeTest_Currency() {
       //  String con=
         given()
@@ -182,7 +187,7 @@ public class LookupEntryControllerTest {
 
 
     @Test
-
+    @Ignore
     public void lookupsbytypeTest_Exchage() {
      //   String con=
         given()
@@ -199,6 +204,134 @@ public class LookupEntryControllerTest {
 
 
     }
+
+
+@Test
+@Ignore
+    public void cratelookupTest () {
+
+
+    class Entity {
+        private String id;
+        private String type;
+        private Map<String, String> fields;
+
+        public void setType(String type) {
+            this.type = type;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public void setFields(Map<String, String> fields) {
+            this.fields = fields;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public Map<String, String> getFields() {
+            return fields;
+        }
+    }
+    ;
+    Entity entity = new Entity();
+    entity.setId("5b89999901649051807ea5c6");
+    entity.setType("Currency");
+
+    Map<String, String> fields = new HashMap<>();
+    fields.put("domainCode", "GGG");
+    fields.put("CURRENCY_ISO3_CD", "GGG");
+    fields.put("CURRENCY_NM", "TEST");
+
+    entity.setFields(fields);
+
+System.out.println(entity.fields);
+    System.out.println(entity.id);
+  //  System.out.println(entity.type);
+    System.out.println(entity.getType());
+    /*   given()
+            .header("authorization", token)
+            .contentType("application/json")
+            .body(entity)
+            .when().post("http://prototype.datasynthes.com/api/v1/lookups/").then()
+            .assertThat()
+            .statusCode(200)
+            .body(containsString("\"id\": \"5b89999901649051807ea5c6\""));
+*/
+
+}
+
+
+@Test
+
+public void lookupsbytypeTestMap_Exchage() {
+    //   String con=
+    given()
+            .header("authorization", token)
+            .pathParam("type", "Exchange")
+            .param("size", "100000")
+            .when()
+            .get("http://prototype.datasynthes.com/api/v1/lookups/{type}/mapped")
+            //.get("http://prototype.datasynthes.com/api/v1/lookups/Currency/?size=100000")
+            .then()
+            .assertThat()
+            .statusCode(200)
+            .body(containsString("\"numberOfElements\":1613"));
+
+
+}
+
+    @Test
+
+    public void lookupsbytypeTestMap_Currency() {
+        //  String con=
+        given()
+                .header("authorization", token)
+                .pathParam("type", "Currency")
+                .param("size", "100000")
+                .when()
+                .get("http://prototype.datasynthes.com/api/v1/lookups/{type}/mapped")
+                //.get("http://prototype.datasynthes.com/api/v1/lookups/Currency/?size=100000")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"numberOfElements\":187"));
+
+    }
+
+
+
+    @Test
+
+    public void lookupsbytypeTestMap_Contry() {
+        // String con=
+        given()
+                .header("authorization", token)
+                .pathParam("type", "Country")
+                .param("size", "100000")
+                .when()
+                .get("http://prototype.datasynthes.com/api/v1/lookups/{type}/")
+                //.get("http://prototype.datasynthes.com/api/v1/lookups/Currency/?size=100000")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"numberOfElements\":354"));
+        //   .extract()
+        //    .path("access_token");
+        //    .jsonPath().getString("numberOfElements").equals("354");
+        //можно выевсти весь content
+        //  System.out.println('\n'+ con);
+
+    }
+
+
 
 
 

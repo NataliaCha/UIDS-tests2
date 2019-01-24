@@ -1,5 +1,7 @@
 package UiTest;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Flaky;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -57,7 +59,8 @@ public class DSTest {
 
 
     @Test
-
+    @Description ("Create Data Catalog + data source")
+    @Flaky
     public void A() {
 //createDCTest
         driver.findElement(By.xpath("//div[@class='hider']")).click();
@@ -99,7 +102,8 @@ public class DSTest {
 
 
     @Test
-
+    @Flaky
+    @Description ("download file for new data source +some modification")
     public void B() {
 //realDCЕTest
 
@@ -195,7 +199,9 @@ public class DSTest {
 
 
     @Test
-  @Ignore
+    @Description ("Delete Data Catalog + data source")
+    @Flaky
+    @Ignore
 
         //(удаление и DC и DS)
     public void C () {

@@ -2,6 +2,8 @@ package UiTest; /**
  * Created by natalia.chaplygina on 20.12.2018.
  */
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -89,6 +91,7 @@ public class JobsTest {
 
 
     @Test
+    @Severity (SeverityLevel.CRITICAL)
 //update package
     public void A() {
 
@@ -264,6 +267,7 @@ public class JobsTest {
 
 
     @Test
+    @Severity (SeverityLevel.CRITICAL)
 //update package
     public void B() {
 

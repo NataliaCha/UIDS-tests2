@@ -9,9 +9,9 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
-//import io.qameta.allure.junit4.DisplayName;
-//import io.qameta.allure.Severity;
-//import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.junit4.DisplayName;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 
 public class CategoryControllerTest {
 
@@ -42,7 +42,8 @@ public class CategoryControllerTest {
 
     }
     @Test
-//    @DisplayName("Test to get category")
+   @DisplayName("Test to get category")
+
 //    @Severity(SeverityLevel.CRITICAL)
     public void getCategoryTest() {
         given()
