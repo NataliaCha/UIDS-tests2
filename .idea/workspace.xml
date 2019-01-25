@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/Java/BackTest/DqPoliciesTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/Java/BackTest/CatalogTest.java" afterPath="$PROJECT_DIR$/src/test/Java/BackTest/CatalogTest.java" />
     </list>
     <ignored path="uitest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +34,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CatalogTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CatalogTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/Java/BackTest/CatalogTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="24" />
+            <state relative-caret-position="510">
+              <caret line="72" column="5" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="72" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DqPoliciesTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/Java/BackTest/DqPoliciesTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,6 +119,7 @@
         <option value="$PROJECT_DIR$/src/test/Java/UiTest/DSTest.java" />
         <option value="$PROJECT_DIR$/src/test/Java/BackTest/LookupEntryControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/Java/BackTest/CatalogTest.java" />
+        <option value="$PROJECT_DIR$/src/test/Java/BackTest/DqPoliciesTest.java" />
       </list>
     </option>
   </component>
@@ -258,7 +271,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CatalogTest.CatalogCreate">
+  <component name="RunManager" selected="JUnit.DqPoliciesTest.CatalogTestAll">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -279,31 +292,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-    </configuration>
-    <configuration name="CatalogTest.CatalogCrate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="BackTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="uitest" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="BackTest" />
-      <option name="MAIN_CLASS_NAME" value="BackTest.CatalogTest" />
-      <option name="METHOD_NAME" value="CatalogCrate" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="CatalogTest.CatalogCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -393,6 +381,31 @@
       <option name="PACKAGE_NAME" value="BackTest" />
       <option name="MAIN_CLASS_NAME" value="BackTest.CatalogTest" />
       <option name="METHOD_NAME" value="CatalogTestByID" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="DqPoliciesTest.CatalogTestAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="BackTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="uitest" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="BackTest" />
+      <option name="MAIN_CLASS_NAME" value="BackTest.DqPoliciesTest" />
+      <option name="METHOD_NAME" value="CatalogTestAll" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -747,17 +760,17 @@
       <item index="1" class="java.lang.String" itemvalue="Maven.UiTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogTestByID" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogTestAll" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogCrate" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogDelete" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogCreate" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogDelete" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogCreate" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.DqPoliciesTest.CatalogTestAll" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogCreate" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogTestByID" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogDelete" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogTestAll" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogCrate" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DqPoliciesTest.CatalogTestAll" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogCreate" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogTestByID" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogDelete" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CatalogTest.CatalogTestAll" />
       </list>
     </recent_temporary>
   </component>
@@ -985,7 +998,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548342049227</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="+catalogTests">
+      <created>1548424746032</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1548424746032</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1010,14 +1030,14 @@
     <history-entry file="CatalogTest_CatalogDelete - 2019.01.25 at 15h 15m 58s.xml">
       <configuration name="CatalogTest.CatalogDelete" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CatalogTest_CatalogTestByID - 2019.01.25 at 14h 44m 16s.xml">
-      <configuration name="CatalogTest.CatalogTestByID" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CatalogTest_CatalogTestByID - 2019.01.25 at 15h 03m 58s.xml">
       <configuration name="CatalogTest.CatalogTestByID" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CatalogTest_CatalogTestByID - 2019.01.25 at 15h 16m 10s.xml">
       <configuration name="CatalogTest.CatalogTestByID" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DqPoliciesTest_CatalogTestAll - 2019.01.25 at 17h 08m 44s.xml">
+      <configuration name="DqPoliciesTest.CatalogTestAll" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1350,18 +1370,28 @@
         <state relative-caret-position="5355">
           <caret line="329" column="42" lean-forward="true" selection-start-line="328" selection-start-column="7" selection-end-line="329" selection-end-column="42" />
           <folding>
-            <element signature="e#6575#6576#0" expanded="true" />
-            <element signature="e#6615#6616#0" expanded="true" />
-            <element signature="e#6655#6656#0" expanded="true" />
-            <element signature="e#6691#6692#0" expanded="true" />
-            <element signature="e#6752#6753#0" expanded="true" />
-            <element signature="e#6796#6797#0" expanded="true" />
-            <element signature="e#6829#6830#0" expanded="true" />
-            <element signature="e#6862#6863#0" expanded="true" />
-            <element signature="e#6897#6898#0" expanded="true" />
-            <element signature="e#6932#6933#0" expanded="true" />
-            <element signature="e#6982#6983#0" expanded="true" />
-            <element signature="e#7019#7020#0" expanded="true" />
+            <element signature="e#6575#6576#0" expanded="false" />
+            <element signature="e#6615#6616#0" expanded="false" />
+            <element signature="e#6655#6656#0" expanded="false" />
+            <element signature="e#6691#6692#0" expanded="false" />
+            <element signature="e#6752#6753#0" expanded="false" />
+            <element signature="e#6796#6797#0" expanded="false" />
+            <element signature="e#6829#6830#0" expanded="false" />
+            <element signature="e#6862#6863#0" expanded="false" />
+            <element signature="e#6897#6898#0" expanded="false" />
+            <element signature="e#6932#6933#0" expanded="false" />
+            <element signature="e#6982#6983#0" expanded="false" />
+            <element signature="e#7019#7020#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Java/BackTest/CatalogTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="72" column="5" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1374,10 +1404,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Java/BackTest/CatalogTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/Java/BackTest/DqPoliciesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="24" />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
