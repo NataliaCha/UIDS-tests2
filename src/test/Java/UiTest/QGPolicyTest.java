@@ -1,5 +1,6 @@
 package UiTest;
 
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -82,6 +83,7 @@ public class QGPolicyTest {
 
 
     @Test
+    @DisplayName("Creation DQ Policy")
 
     public void A
     //ACreatenewDQTest
@@ -173,6 +175,7 @@ public class QGPolicyTest {
 
 
     @Test
+    @DisplayName("Update DQ Policy")
 
     public void B
    // BrealDQTest
@@ -202,7 +205,7 @@ public class QGPolicyTest {
 
 
     @Test
-
+    @DisplayName("Delete DQ Policy")
     public void C
     //DeletenewDQTest
     () {

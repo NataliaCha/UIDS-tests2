@@ -4,6 +4,7 @@ package UiTest;
  */
 
 
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -63,6 +64,7 @@ public class CustomPropTest {
     }
 
     @Test
+    @DisplayName(" Creation new custom prop")
     // создание cusutom property to itsself+cusutom property to root
     public void A() {
 

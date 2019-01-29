@@ -2,6 +2,8 @@ package UiTest; /**
  * Created by natalia.chaplygina on 19.12.2018.
  */
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -61,6 +63,8 @@ public class NestedAttrTest {
     }
 
     @Test
+    @DisplayName("Creation nested attr")
+    @Description("Creation nested attr attributes")
      // создание nested attr
     public void A () {
 
@@ -134,6 +138,7 @@ public class NestedAttrTest {
     }
 
 @Test
+@DisplayName("Creation attr")
 
     public void B () {
 
@@ -244,7 +249,7 @@ public class NestedAttrTest {
 }
 
     @Test
-
+    @DisplayName("Creation attr in nested attr")
     public void C () {
 
 //add attribute in nested
@@ -357,6 +362,7 @@ public class NestedAttrTest {
 
 
     @Test
+    @DisplayName("Creation nested attr in nested attr")
 //Add nested in nested
     public void D () {
         driver.findElement(By.xpath("//li[@class='bp3-tree-node bp3-tree-node-expanded'][4]//span[@class='bp3-icon bp3-icon-chevron-right bp3-tree-node-caret bp3-tree-node-caret-open']")).click();

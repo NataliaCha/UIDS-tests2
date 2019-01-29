@@ -2,6 +2,7 @@ package UiTest;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Flaky;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -59,7 +60,8 @@ public class DSTest {
 
 
     @Test
-    @Description ("Create Data Catalog + data source")
+    //@Description ("Create ")
+    @DisplayName(" Creation new Data Catalog + data source")
     @Flaky
     public void A() {
 //createDCTest
@@ -103,6 +105,7 @@ public class DSTest {
 
     @Test
     @Flaky
+    @DisplayName("Update DS")
     @Description ("download file for new data source +some modification")
     public void B() {
 //realDCЕTest
@@ -199,6 +202,7 @@ public class DSTest {
 
 
     @Test
+    @DisplayName("Delete DC+DS")
     @Description ("Delete Data Catalog + data source")
     @Flaky
     @Ignore

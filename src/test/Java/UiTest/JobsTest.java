@@ -2,8 +2,10 @@ package UiTest; /**
  * Created by natalia.chaplygina on 20.12.2018.
  */
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -91,6 +93,8 @@ public class JobsTest {
 
 
     @Test
+    @DisplayName("Upload small file")
+    @Description("Upload small file with checking the presence of the file with the results and links to the logs ")
     @Severity (SeverityLevel.CRITICAL)
 //update package
     public void A() {
@@ -268,6 +272,8 @@ public class JobsTest {
 
     @Test
     @Severity (SeverityLevel.CRITICAL)
+    @DisplayName("Upload large file")
+    @Description("Upload large file with checking the presence of the file with the results and links to the logs ")
 //update package
     public void B() {
 

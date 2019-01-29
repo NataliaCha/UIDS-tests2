@@ -1,5 +1,7 @@
 package UiTest;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -58,7 +60,8 @@ public class LookupTest {
 
 
     @Test
-
+    @DisplayName("Creation new lookup")
+   // @Description("Upload large file with checking the presence of the file with the results and links to the logs ")
     public void A() {
 //createLookUpTest
 
@@ -95,7 +98,8 @@ public class LookupTest {
 
     //работа с  существующим lookup
     @Test
-
+    @DisplayName("Update lookup")
+    @Description("Update lookup with filling some attributes")
     public void B() {
 //realLookUpTest
 
@@ -306,7 +310,8 @@ public class LookupTest {
     //открыли и проверили что все что ввели- сохранилось
 
     @Test
-
+    @DisplayName("Delete lookup")
+ //   @Description("Update lookup with filling some attributes")
     public void C() {
 
 //CheckLookupTest
