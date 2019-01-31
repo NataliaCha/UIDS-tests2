@@ -2,6 +2,7 @@ package BackTest;
 
 
 
+import io.qameta.allure.Description;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -12,7 +13,8 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.*;
+
 import io.qameta.allure.junit4.DisplayName;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -50,8 +52,9 @@ public class CatalogTest {
         token = token2;
 
     }
-@Test
-@DisplayName("/internal/meta/dataCatalogs?draft=true -GET")
+    @Test
+    @DisplayName("/internal/meta/dataCatalogs?draft=true -GET")
+    @Description("Get all DC with draft-true and size =100000")
     public void CatalogTestAll() {
      //    String con=
         given()
@@ -74,6 +77,61 @@ public class CatalogTest {
 
 
     @Test
+    @DisplayName("/internal/meta/dataCatalogs?draft=true -GET,size empty")
+    @Description("Get all DC with draft-true and empty size")
+    public void CatalogTestAll1() {
+        //    String con=
+        given()
+                .header("authorization", token)
+                .param("size", "")
+                .param("draft", "true")
+                .when()
+                .get("http://prototype.datasynthes.com/api/internal/meta/dataCatalogs")
+                //.get("http://prototype.datasynthes.com/api/v1/lookups/Currency/?size=100000")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"name\":\"Bloomberg\""));/// проверим что, Bloomberg на месте
+        // .extract() .jsonPath().getString("content") ;
+
+
+        //можно выевсти весь content
+        //  System.out.println('\n'+ con);
+    }
+
+
+    @Test
+    @DisplayName("/internal/meta/dataCatalogs?draft=true -GET,page empty")
+    @Description("Get all DC with draft-true and empty size")
+    public void CatalogTestAll2() {
+        //    String con=
+        given()
+                .header("authorization", token)
+                .param("page", "100")
+                .param("draft", "true")
+                .when()
+                .get("http://prototype.datasynthes.com/api/internal/meta/dataCatalogs")
+                //.get("http://prototype.datasynthes.com/api/v1/lookups/Currency/?size=100000")
+                .then()
+               /// .assertThat()
+                .statusCode(200)
+             //   .body(containsString("\"name\":\"Bloomberg\""));/// проверим что, Bloomberg на месте
+
+               //  .body(hasSize("content",0));
+//.body(isEmptyOrNullString());
+  .content("",isEmptyString());
+     //   .body("content".isEmpty());
+        // .extract() .jsonPath().getString("content") ;
+//.body("isEmpty()", Matchers.is(true))
+
+        //можно выевсти весь content
+        //  System.out.println('\n'+ con);
+    }
+
+
+
+
+    @Test
     @DisplayName("/internal/meta/dataCatalogs?draft=false -GET")
     public void CatalogTestAll_false() {
         // String con=
@@ -89,7 +147,6 @@ public class CatalogTest {
                 .statusCode(200)
                 .body(containsString("\"name\":\"Bloomberg\""));
     }
-
 
 
 
@@ -194,11 +251,6 @@ public class CatalogTest {
 
 
 
-
-
-
-
-
     @Test
     @DisplayName("/internal/meta/dataCatalogs/${catalogName}?draft=true -DELETE")
     @Ignore
@@ -215,8 +267,6 @@ public class CatalogTest {
                 .statusCode(200);
 
     }
-
-
 
 
     @Test
@@ -254,9 +304,6 @@ public class CatalogTest {
                 .statusCode(200)
                 .body(containsString("\"errors\":null"));
     }
-
-
-
 
 
 

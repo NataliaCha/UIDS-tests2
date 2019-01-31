@@ -4,6 +4,7 @@ package UiTest;
  * Created by natalia.chaplygina on 22.11.2018.
  */
 
+import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.io.FileUtils;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
@@ -181,7 +182,7 @@ public class FirstTest {
 
 
     @Test
-    @Ignore
+    @DisplayName("IU Export model")
     //эскпортируем модель
     public void ExportmodelTest() {
 
@@ -200,6 +201,7 @@ public class FirstTest {
     }
 
     @Test
+    @DisplayName("IU load and Import model")
 
     public void loadModelTest() {
 

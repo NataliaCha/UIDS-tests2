@@ -284,17 +284,16 @@ public class JobsTest {
         downloadFilepath = downloadFilepath + "\\mydownloads";
 
 
-        //Начинается работа с пакетами **можно исключить
-
-        //    driver.findElement(By.xpath("//div[@class='ui card panel']/div[@class='content']/div[@class='main entities-tab']/div[@class='ui segment active tab']/div/div[@class='accordion ui fluid ds-accordion']/div[@class='content active']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group'][1]/div[@class='rt-tr -odd']/div[@class='rt-td'][1]/a")).click();
 
 
+///Можно остаивть только эти строки
 
         //Надо поудмать как вычислять кнопку
         driver.findElement(By.xpath("//div[@class='ui segment active tab']/div[@class='accordion ui fluid ds-accordion']/div[@class='content active']/div[2]/a/i[@class='plus circle large icon']")).click();
-
-
         WebElement uploadElement1 = driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui tiny modal transition visible active']/div[@class='content']/form[@class='ui form']/div[@class='equal width fields']/div[@class='field']/div[@class='ui input']/input"));
+
+
+
 
         //добавить загрузку из папки
         String downloadFilepath1 = System.getProperty("user.dir");

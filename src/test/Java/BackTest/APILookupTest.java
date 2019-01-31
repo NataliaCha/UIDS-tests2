@@ -1,17 +1,19 @@
 package BackTest;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 
-public class LookupTest {
+public class APILookupTest {
 
 
 
@@ -48,10 +50,11 @@ public class LookupTest {
 
 
     @Test
-    @DisplayName(" /internal/meta/lookup-entities/?draft=true -GET")
-    @Description("Get all lookups")
+    @Story("GET")
+    @DisplayName("/internal/meta/lookup-entities/?draft=true -GET")
+    @Description("Get all lookups with draft- true +check lookup Country")
 
-    public void entitiesTestAll() {
+    public void entitiesTestAllTrue() {
         //    String con=
         given()
                 .header("authorization", token)
@@ -65,11 +68,217 @@ public class LookupTest {
                 .assertThat()
                 .statusCode(200)
                 //  .body(containsString("\"totalElements\":7"))
-                .body(containsString("\"totalElements\":32"));  //проверим что, UBS policy на месте
+                .body(containsString("\"totalElements\":21"))
+                .body(containsString("\"name\":\"Country\""));
+
+        //проверим что, UBS policy на месте
+
+    }
+    @Test
+    @DisplayName("/internal/meta/lookup-entities/?draft=false -GET")
+    @Description("Get all lookups with draft- false +check lookup Country")
+
+    public void entitiesTestAllFalse() {
+        //    String con=
+        given()
+                .header("authorization", token)
+                .param("size", "100000")
+                .param("draft", "false")
+                .when()
+                .get("/api/internal/meta/lookup-entities")
+                //   .get(baseURI+basePath+"/dqPolicies")
+
+                .then()
+                .assertThat()
+                .statusCode(200)
+                //  .body(containsString("\"totalElements\":7"))
+              //  .body(containsString("\"totalElements\":21"))
+              .body(containsString("\"name\":\"Country\""));
+
+        //проверим что, UBS policy на месте
 
     }
 
-///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%!!!!!!!!!!!!!!!!!!!!!!!!
+    @Test
+    @DisplayName("/internal/meta/lookup-entities/{id} -GET")
+    @Description("Get real lookup Country")
+
+    public void entitiesTestCountry() {
+        given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "Country")
+                .param("draft", "true")
+                .when()
+                .get("/api/internal/meta/lookup-entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"success\":true")).body(containsString("\"errors\":null"))
+                .body(containsString("\"displayName\":\"Country\""));
+
+        System.out.println("Find Country");
+    }
+
+        @Test
+        @DisplayName("/internal/meta/lookup-entities/{id} -GET UPPER letters")
+        @Description("Get real lookup COUNTRY -Upper Case ")
+        public void entitiesTestCountryUp() {
+        given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "COUNTRY")
+                .param("draft", "true")
+                .when()
+                .get("/api/internal/meta/lookup-entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"Lookup entity is not found."));
+
+        System.out.println("not Find COUNTRY");
+
+
+
+    }
+
+    @Test
+    @DisplayName("/internal/meta/lookup-entities/{id} -GET_negative")
+    @Description("Get not real lookup absence")
+
+    public void entitiesTest() {
+        given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "Absence")
+                .param("draft", "true")
+                .when()
+                .get("/api/internal/meta/lookup-entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"success\":false")).body(containsString("Lookup entity is not found"));
+
+
+    }
+
+
+
+
+    @Test
+    @Ignore
+    @DisplayName("/internal/meta/ lookup-entities/${name}?draft=true -POST/empty")
+    @Description("Create new lookup with empty attributes. It's succuess and it is bad")
+    //fullcycle to create, get and delete dc
+    public void lookupCreatedem() {
+
+
+        JSONObject lookup = new JSONObject();
+        JSONArray ar = new JSONArray();
+
+
+        lookup.put("aliasCodeAttributes", ar);
+        lookup.put("aliases", ar);
+        lookup.put("categories", ar);
+        lookup.put("codeAttribute", JSONObject.NULL);
+        lookup.put("dataQualityRules", ar);
+        lookup.put("displayName", "");
+        lookup.put("description", "");
+        lookup.put("glossaries", ar);
+        lookup.put("name", "");
+        lookup.put("groupName", "ROOT.referenceTables");
+        lookup.put("relatedTerms", ar);
+        lookup.put("replacementTerms", ar);
+        lookup.put("rights", ar);
+        lookup.put("simpleAttributes", ar);
+        lookup.put("synonyms", ar);
+        lookup.put("customAttributeMetas", ar);
+
+
+        System.out.println(lookup);
+
+
+        given()
+                .header("authorization", token)
+                .contentType("application/json")
+                .body(lookup.toString())
+                .when().post("/api/internal/meta/lookup-entities?draft=true").then()
+                //"http://prototype.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"success\":true"));
+
+        System.out.println("New lookup with empty name/display name was created");
+
+
+
+    }
+////////////
+    @Test
+
+    @DisplayName("/internal/meta/ lookup-entities/${name}?draft=true -POST(cat not real")
+    @Description("Create new lookup with  category not from list  and  name like 8566 ")
+    //fullcycle to create, get and delete dc
+    public void lookupCreateddif1() {
+
+
+        JSONObject lookup = new JSONObject();
+        JSONArray ar = new JSONArray();
+        JSONArray cat= new JSONArray();
+
+        lookup.put("aliasCodeAttributes", ar);
+        lookup.put("aliases", ar);
+        lookup.put("categories", cat);
+        //cat.put("Issue Classification");
+        cat.put("popo");
+
+        lookup.put("codeAttribute", JSONObject.NULL);
+        lookup.put("dataQualityRules", ar);
+        lookup.put("displayName", "123");
+        lookup.put("description", "");
+        lookup.put("glossaries", ar);
+        lookup.put("name", "8566");
+        lookup.put("groupName", "ROOT.referenceTables");
+        lookup.put("relatedTerms", ar);
+        lookup.put("replacementTerms", ar);
+        lookup.put("rights", ar);
+        lookup.put("simpleAttributes", ar);
+        lookup.put("synonyms", ar);
+        lookup.put("customAttributeMetas", ar);
+
+//        System.out.println(lookup);
+
+//
+        given()
+                .header("authorization", token)
+                .contentType("application/json")
+                .body(lookup.toString())
+                .when().post("/api/internal/meta/lookup-entities?draft=true").then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"success\":true"));
+
+        System.out.println("New lookup with empty name/display name was created");
+//check
+       given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "8566")
+                .param("draft", "true")
+                .when()
+                .get("/api/internal/meta/lookup-entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"success\":true")).body(containsString("\"errors\":null"))
+                .body(containsString("\"displayName\":\"123\""));
+
+
+    }
+
+//"Lookup entity is not found."
+
+///////////////////
 
     @Test
     @DisplayName("/internal/meta/ lookup-entities/${name}?draft=true -POST,GET,DUT,DELETE")
@@ -113,7 +322,7 @@ public class LookupTest {
                 .statusCode(200)
                 .body(containsString("\"success\":true"));
 
-        System.out.println("New lookuo was created");
+        System.out.println("New lookup was created");
 
         //check new entity
         given()
@@ -334,6 +543,74 @@ public class LookupTest {
     }
 
 
+
+
+
+
+
+
+    @Test
+    @DisplayName("/internal/meta/ lookup-entities/${name}?draft=true -DELETE_negative")
+    @Description("Delete not real lookup")
+    //fullcycle to create, get and delete dc
+    public void lookupDeleten() {
+
+        given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "absence")
+                .param("draft", "true")
+                .when()
+                .delete("/api/internal/meta/lookup-entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(200);
+        //  .body(containsString("\"success\":true")).body(containsString("\"errors\":null"));
+        System.out.println("lookup was deleted");
+
+    }
+
+    @Test
+    @DisplayName("/internal/meta/ lookup-entities/${name}?draft=true -DELETE_positive")
+    @Description("Delete real lookup")
+    //fullcycle to create, get and delete dc
+    public void lookupDeletpos() {
+
+        given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "8566")
+                .param("draft", "true")
+                .when()
+                .delete("/api/internal/meta/lookup-entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(200);
+        //  .body(containsString("\"success\":true")).body(containsString("\"errors\":null"));
+        System.out.println("lookup was deleted");
+
+    }
+
+    @Test
+    @DisplayName("/internal/meta/ lookup-entities/${name}?draft=true -DELETE_bad req")
+    @Description("Delete lookup with empty id")
+    //fullcycle to create, get and delete dc
+    public void lookupDeletneg2() {
+
+        given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "")
+                .param("draft", "true")
+                .when()
+                .delete("/api/internal/meta/lookup-entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(405);
+        //  .body(containsString("\"success\":true")).body(containsString("\"errors\":null"));
+        System.out.println("bad request");
+
+    }
 }
 
 
