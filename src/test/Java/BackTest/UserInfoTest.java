@@ -124,10 +124,10 @@ public class UserInfoTest {
         /*         * {"dept":"IT","firstName":"John","lastName":"Doerr","login":"admin","theme":"dark"*/
         JSONObject userdata = new JSONObject();
         userdata.put("dept", "IT");
-        //userdata.put("firstName", "John");
+       userdata.put("firstName", "John");
        // userdata.put("firstName", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
-        userdata.put("lastName", "Doerr");
+        userdata.put("lastName", "Doer");
         userdata.put("login", "admin");
         userdata.put("theme", newtheme);
        // userdata.put("theme", "blue");

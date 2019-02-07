@@ -3,6 +3,7 @@ package BackTest; /**
  */
 
 
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -41,11 +42,12 @@ public class TaxonomyControllerTest {
 
     }
     @Test
+    @DisplayName("/api/v1/taxonomies/")
     public void getTaxonomyTest() {
         given()
                 .header("authorization", token)
                 .when()
-                .get("http://prototype.datasynthes.com/api/v1/taxonomies")
+                .get("/api/v1/taxonomies")
                 .then()
                 .assertThat()
                 .statusCode(200)
@@ -62,12 +64,13 @@ public class TaxonomyControllerTest {
 
 
     @Test
+    @DisplayName("/api/v1/taxonomies/{id}")
     public void getTaxonomybyidTest() {
         given()
                 .header("authorization", token)
                 .pathParam("id", "5bfd0bddfeb5bb2a7cb7e975")
                 .when()
-                .get("http://prototype.datasynthes.com/api/v1/taxonomies/{id}")
+                .get("/api/v1/taxonomies/{id}")
                 .then()
                 .assertThat()
                 .statusCode(200)

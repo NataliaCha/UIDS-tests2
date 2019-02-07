@@ -4,8 +4,11 @@ import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
+//import io.restassured.http.Headers;
+import io.restassured.response.Response;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -611,22 +614,95 @@ public class APILookupTest {
         System.out.println("bad request");
 
     }
+
+
+
+    @Test
+    @DisplayName("/v1/lookups/{type}/export")
+    @Description("Export lookup and  check availability of attachment and  filename= like Exchange....")
+    public void lookupExportTest() {
+
+
+        JSONObject lookupex = new JSONObject();
+
+        lookupex.put("format", "CSV");
+        lookupex.put("csvFieldDelimiter", "|");
+        lookupex.put("csvQuoteChar", "\"");
+        lookupex.put("csvHeader", true);
+        lookupex.put("csvIncludeId", true);
+        lookupex.put("displayName", "");
+
+
+
+        System.out.println(lookupex);
+
+       Response response =
+               given()
+                       .header("authorization", token)
+                       .pathParam("id", "Exchange")
+                       .contentType("application/json")
+                       .body(lookupex.toString())
+                       .when().post("/api/v1/lookups/{id}/export").then()
+                       .assertThat()
+                       .statusCode(200)
+                     //  .extract().response().getHeader("Content-Disposition").contains("attachment; filename=\"ExchangeSSSS");
+                       .extract().response();
+     //   System.out.println(response.getHeader("Content-Disposition") );
+        Assert.assertTrue(response.getHeader("Content-Disposition").contains("attachment; filename=\"Exchange"));
+
+
+
+
+
+    }
+
+
+
+    @Test
+    @DisplayName("/v1/lookups/{type}/export/exportCsvTemplate")
+    @Description("Export lookup in exportCsvTemplate and  check availability of attachment and  filename= like Exchange-template.csv")
+    public void lookupExportTemplTest() {
+
+
+        JSONObject lookupex = new JSONObject();
+
+        lookupex.put("format", "CSV");
+        lookupex.put("csvFieldDelimiter", "|");
+        lookupex.put("csvQuoteChar", "\"");
+        lookupex.put("csvHeader", true);
+        lookupex.put("csvIncludeId", true);
+        lookupex.put("displayName", "");
+
+
+
+        System.out.println(lookupex);
+
+        Response response =
+                given()
+                        .header("authorization", token)
+                        .pathParam("id", "Exchange")
+                        .contentType("application/json")
+                        .body(lookupex.toString())
+                        .when().post("/api/v1/lookups/{id}/export").then()
+                        .assertThat()
+                        .statusCode(200)
+                        //  .extract().response().getHeader("Content-Disposition").contains("attachment; filename=\"ExchangeSSSS");
+                        .extract().response();
+        //   System.out.println(response.getHeader("Content-Disposition") );
+        Assert.assertTrue(response.getHeader("Content-Disposition").contains("attachment; filename=\"Exchange-template.csv"));
+
+
+
+
+
+    }
+
+
+
+
+    //http://prototype.datasynthes.com/api/v1/lookups/Exchange/exportCsvTemplate
+
 }
 
 
 
-
-
-   /*     JSONObject requestparams = new JSONObject();
-JSONArray authArray = new JSONArray();
-JSONObject authparam = new JSONObject();
-
-        requestparams.put("FirstName", "Virender");
-        requestparams.put("LastName", "Singh");
-
-        authparam.put("Line1", "Flat no 101");
-        authparam.put("Area", "Andheri");
-        authparam.put("City", "Mumbai");
-        authArray.put(authparam);
-
-        requestparams.put("Address", authparam);*/

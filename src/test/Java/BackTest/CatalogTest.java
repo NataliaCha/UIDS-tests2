@@ -133,6 +133,7 @@ public class CatalogTest {
 
     @Test
     @DisplayName("/internal/meta/dataCatalogs?draft=false -GET")
+    @Description("Get all DC with draft-false and size =100000")
     public void CatalogTestAll_false() {
         // String con=
         given()
@@ -152,7 +153,7 @@ public class CatalogTest {
 
     @Test
     @DisplayName("/internal/meta/dataCatalogs/${catalogName}?draft=true -POST,GET,DUT,DELETE")
-    //fullcycle to create, get and delete dc
+    @Description("Full cycle to create, get and delete dc")
     public void CatalogCreate() {
 
         JSONObject dc = new JSONObject();
@@ -253,6 +254,7 @@ public class CatalogTest {
 
     @Test
     @DisplayName("/internal/meta/dataCatalogs/${catalogName}?draft=true -DELETE")
+    @Description("Delete dc")
     @Ignore
     public void CatalogDelete() {
 
@@ -271,13 +273,14 @@ public class CatalogTest {
 
     @Test
     @DisplayName("/internal/meta/dataCatalogs/${catalogName}?draft=true -GET")
+    @Description("Get Bloomberg by ID")
     @Ignore
     public void CatalogTestByID() {
         // String con=
         given()
                 .header("authorization", token)
-                //.pathParam("id", "Bloomberg")
-                .pathParam("id", "test")
+                .pathParam("id", "Bloomberg")
+                //.pathParam("id", "test")
                 .param("draft", "true")
                 .when()
                 .get("http://prototype.datasynthes.com/api/internal/meta/dataCatalogs/{id}")

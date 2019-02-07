@@ -1,5 +1,6 @@
 package BackTest;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import org.json.JSONArray;
@@ -47,6 +48,7 @@ public class EntitiesTest {
 
     @Test
     @DisplayName(" /internal/meta/entities/?draft=true -GET")
+    @Description("Get all entities")
 
     public void entitiesTestAll() {
         //    String con=
@@ -62,15 +64,36 @@ public class EntitiesTest {
                 .assertThat()
                 .statusCode(200)
               //  .body(containsString("\"totalElements\":7"))
-                .body(containsString("\"totalElements\":7"));  //проверим что, UBS policy на месте
+                .body(containsString("\"totalElements\":8"));
 
     }
 
 
+    @Test
+    @DisplayName(" /internal/meta/entities/?draft=true -GET")
+    @Description("Get entity by name - get Client Model")
+
+    public void entitiesbyID() {
+
+        given()
+                .header("authorization", token)
+                //.pathParam("id", "Bloomberg")
+                .pathParam("id", "ClientModel")
+                .param("draft", "true")
+                .when()
+                .get("/api/internal/meta/entities/{id}")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .body(containsString("\"success\":true")).body(containsString("\"errors\":null"))
+                .body(containsString("\"displayName\":\"Client Model\""));
+
+
+    }
 
     @Test
     @DisplayName("/internal/meta/ dqPolicies/${name}?draft=true -POST,GET,DUT,DELETE")
-    //fullcycle to create, get and delete dc
+    @Description("Full cycle to post,get,put and delete new entity")
     public void entityCreate() {
 
 

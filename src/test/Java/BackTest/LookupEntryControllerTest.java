@@ -270,7 +270,7 @@ System.out.println(entity.fields);
 
 
 @Test
-
+@Ignore
 public void lookupsbytypeTestMap_Exchage() {
     //   String con=
     given()
@@ -289,6 +289,7 @@ public void lookupsbytypeTestMap_Exchage() {
 }
 
     @Test
+    @Ignore
 
     public void lookupsbytypeTestMap_Currency() {
         //  String con=
@@ -309,6 +310,7 @@ public void lookupsbytypeTestMap_Exchage() {
 
 
     @Test
+    @Ignore
 
     public void lookupsbytypeTestMap_Contry() {
         // String con=

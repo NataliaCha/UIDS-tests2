@@ -57,7 +57,7 @@ public class DSTest {
         loginButton.click();
     }
 
-
+//vn -Dtest=TestCircle#testOne+testTwo test
 
     @Test
     //@Description ("Create ")
@@ -205,7 +205,7 @@ public class DSTest {
     @DisplayName("Delete DC+DS")
     @Description ("Delete Data Catalog + data source")
     @Flaky
-    //@Ignore
+    @Ignore
 
         //(удаление и DC и DS)
     public void C () {

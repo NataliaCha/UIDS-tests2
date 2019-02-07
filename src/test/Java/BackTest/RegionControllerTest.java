@@ -3,6 +3,7 @@ package BackTest; /**
  */
 
 
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -42,11 +43,12 @@ public class RegionControllerTest {
 
     }
     @Test
+    @DisplayName("/api/v1/regions")
     public void getregionsTest() {
         given().
                 header("authorization", token).
                 when().
-                get("http://prototype.datasynthes.com/api/v1/regions").
+                get("/api/v1/regions").
                 then().
                 assertThat().
                 statusCode(200).
@@ -60,12 +62,13 @@ public class RegionControllerTest {
 
 
     @Test
+    @DisplayName("/api/v1/regions/{id}")
     public void getregionsbyidTest() {
         given().
                 header("authorization", token).
-                param("id","5bf3d04da6f7870001aee9b3").
+                pathParam("id","5bf3d04da6f7870001aee9b3").
                 when().
-                get("http://prototype.datasynthes.com/api/v1/regions").
+                get("/api/v1/regions/{id}").
                 then().
                 assertThat().
                 statusCode(200).

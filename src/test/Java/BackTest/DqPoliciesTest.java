@@ -1,5 +1,6 @@
 package BackTest;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.RestAssured;
@@ -52,6 +53,7 @@ public class DqPoliciesTest
 
     @Test
     @DisplayName(" /internal/meta/dqPolicies/?draft=true -GET")
+    @Description("Get all DQ")
 
     public void CatalogTestAll() {
         //    String con=
@@ -74,7 +76,8 @@ public class DqPoliciesTest
 
     @Test
     @DisplayName("/internal/meta/ dqPolicies/${name}?draft=true -POST,GET,DUT,DELETE")
-    //fullcycle to create, get and delete dc
+    @Description("Full cycle to create, get and delete dc")
+
     public void dqPolicyCreate() {
 
 
@@ -194,8 +197,8 @@ public class DqPoliciesTest
 
 
 @Test
-@Ignore
-@Step ("Get policy by name")
+@DisplayName("/internal/meta/dqPolicies/${name}?draft=true  GEt")
+@Description("Get policy by name")
     public void dqPolicybyid1 () {
 
 given()
@@ -217,8 +220,8 @@ given()
 
     @Test
     @Ignore
-   // @DisplayName("/internal/meta/ dqPolicies/${name}?draft=true -POST,GET,DUT,DELETE")
-    //fullcycle to create, get and delete dc
+    @DisplayName("/internal/meta/ dqPolicies/${name}?draft=true -PUT")
+    @Description ("Update DQ")
     public void dqPolicyUpdate1() {
 
         JSONObject dq1 = new JSONObject();
@@ -253,6 +256,8 @@ given()
     }
 
     @Test
+    @DisplayName("/internal/meta/dqPolicies/${name}?draft=true - delete")
+    @Description ("Delete DQ by ID")
     @Ignore
     public void dqPolicyDelbyid1 () {
 

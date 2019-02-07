@@ -88,7 +88,7 @@ public class NotificationsTest {
     }
 
     @Test
-    @DisplayName("/internal/user/notifications/count-DELETE")
+    @DisplayName("/internal/user/notifications/${id}-DELETE")
     @Description ("delete  notification by ID")
     @Ignore
     public void testGetUsersCountID () {
@@ -139,5 +139,35 @@ public class NotificationsTest {
     }
 
 
+    @Test
+    @DisplayName("/internal/user/notifications/?page=1&start=0&limit=25")
+    @Description ("Get users with params")
+
+    public void testGetUsersParam () {
+
+
+        given()
+                .header("authorization", token)
+              //  .pathParam("id", "249a5d3f-2307-11e9-92ff-87ba01ce01e0")
+                .when()
+                .delete("/api/internal/user/notifications/?page=1&start=0&limit=25")
+                //   .get(baseURI+basePath+"/dqPolicies")
+
+                .then()
+                .assertThat()
+                .statusCode(200)
+                //  .body(containsString("\"totalElements\":7"))
+                .body(containsString("\"success\":true"));
+
+        //*249a5d3f-2307-11e9-92ff-87ba01ce01e0
+
+    }
+
+    /*
+        "success": true,
+            "content": 8,
+            "errors": null
+    }
+*/
 
 }
