@@ -13,6 +13,8 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.io.File;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.containsString;
 
@@ -29,7 +31,7 @@ public class APILookupTest {
     @BeforeClass
     public  static   void  testGetToken() {
 
-        RestAssured.baseURI = "http://prototype.datasynthes.com";
+        RestAssured.baseURI = "https://prototype.datasynthes.com";
         //     RestAssured.basePath= "api/internal/meta";
         String token1 =
                 given()
@@ -206,7 +208,7 @@ public class APILookupTest {
                 .contentType("application/json")
                 .body(lookup.toString())
                 .when().post("/api/internal/meta/lookup-entities?draft=true").then()
-                //"http://prototype.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
+                //"https://prototype.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
                 .assertThat()
                 .statusCode(200)
                 .body(containsString("\"success\":true"));
@@ -320,7 +322,7 @@ public class APILookupTest {
                 .contentType("application/json")
                 .body(lookup.toString())
                 .when().post("/api/internal/meta/lookup-entities?draft=true").then()
-                //"http://prototype.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
+                //"https://prototype.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
                 .assertThat()
                 .statusCode(200)
                 .body(containsString("\"success\":true"));
@@ -492,7 +494,7 @@ public class APILookupTest {
                 .contentType("application/json")
                 .body(lookup1.toString())
                 .when().put("/api/internal/meta/lookup-entities/{id}").then()
-                //http://prototype.datasynthes.com/api/internal/meta/dqPolicies/test?draft=true"
+                //https://prototype.datasynthes.com/api/internal/meta/dqPolicies/test?draft=true"
                 .assertThat()
                 .statusCode(200)
                 .body(containsString("\"success\":true")).body(containsString("\"displayName\":\"testtest\""));
@@ -620,6 +622,7 @@ public class APILookupTest {
     @Test
     @DisplayName("/v1/lookups/{type}/export")
     @Description("Export lookup and  check availability of attachment and  filename= like Exchange....")
+    /*ПОСМОТРЕТЬ ЧТО НЕ РАБОТАЕТ*/
     public void lookupExportTest() {
 
 
@@ -697,10 +700,62 @@ public class APILookupTest {
 
     }
 
+    @Test
+    @DisplayName("/v1/lookups/{type}/import/exportCsvTemplate")
+    @Description("Import lookup in exportCsvTemplate and  check availability of attachment and  filename= like Exchange-template.csv")
+    public void lookupImportTemplTest() {
+
+
+        JSONObject lookupex = new JSONObject();
+
+        lookupex.put("format", "CSV");
+        lookupex.put("csvFieldDelimiter", "|");
+        lookupex.put("csvQuoteChar", "\"");
+        lookupex.put("csvHeader", true);
+        lookupex.put("csvIncludeId", true);
+        lookupex.put("displayName", "");
 
 
 
-    //http://prototype.datasynthes.com/api/v1/lookups/Exchange/exportCsvTemplate
+        System.out.println(lookupex);
+
+        Response response =
+                given()
+                        .header("authorization", token)
+                    //    .pathParam("id", "Exchange")
+                        .contentType("multipart/form-data")
+                     //   .multiPart("file",new File("C:\\Users\\natalia.chaplygina\\Documents\\Рабочее\\tests\\Exchange.csv"))
+
+                    //   .multiPart ()
+                        .param(lookupex.toString())
+                        //.body(lookupex.toString())
+                   //     .when().post("/api/v1/lookups/{id}/import").then()
+                        .when().post("/api/v1/lookups/ Exchange/import").then()
+
+                        .assertThat()
+                        .statusCode(200)
+                        //  .extract().response().getHeader("Content-Disposition").contains("attachment; filename=\"ExchangeSSSS");
+                        .extract().response();
+        System.out.println(response);
+        //   System.out.println(response.getHeader("Content-Disposition") );
+      //  Assert.assertTrue(response.getHeader("Content-Disposition").contains("attachment; filename=\"Exchange-template.csv"));
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+    //https://prototype.datasynthes.com/api/v1/lookups/Exchange/exportCsvTemplate
 
 }
 
