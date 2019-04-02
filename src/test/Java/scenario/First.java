@@ -213,7 +213,7 @@ public class First {
     @Test
     @DisplayName("/api/v1/spark/packages")
     @Description("Update package")
-//@Ignore
+@Ignore
     public void JobTest1()
 
     {
@@ -222,25 +222,23 @@ public class First {
                 given()
                         .header("authorization", token)
                         .contentType("multipart/form-data")
-                        .multiPart("file9", new File("C:\\Users\\natalia.chaplygina\\UIDS-tests2\\tmp\\VendorSource_EQ_source.xlsx"))
+       // Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryhoGeI6Lqlfnv1MVY
+
+            .multiPart("file9", new File("C:\\Users\\natalia.chaplygina\\UIDS-tests2\\tmp\\VendorSource_EQ_source.xlsx"))
                         //   .pathParam("packageId ", packid)
 
                         .pathParam("packageId", "PACK032")
-        .expect()
-                .statusCode(200)
+                        .expect()
+                        .statusCode(200)
                         .when().post("/api/v1/spark/packages/{packageId}/submit").then()
                         // .when().post("/api/v1/spark/packages/PACK032/submit").then()
-                     //   .statusCode(200)
+                        //   .statusCode(200)
                         .extract()
                         .jsonPath().getString("id");
         System.out.println("create a new pckage" + idjob);
 
 
     }
-
-
-
-
 
 
     @Test

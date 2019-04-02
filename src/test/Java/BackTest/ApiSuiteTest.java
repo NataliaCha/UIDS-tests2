@@ -10,8 +10,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 
 @RunWith(Suite.class)
-@SuiteClasses({CategoryControllerTest.class, LookupEntryControllerTest.class, RegionControllerTest.class, SynonymControllerTest.class, TaxonomyControllerTest.class,
-APILookupTest.class,/*APIUserControllerTest.class,*/DqPoliciesTest.class,EntitiesTest.class,NotificationsTest.class} )
+@SuiteClasses({APILookupTest.class,CatalogTest.class, CategoryControllerTest.class,DIfTest.class,DqPoliciesTest.class,EntitiesTest.class, LookupEntryControllerTest.class,NotificationsTest.class, RegionControllerTest.class, SynonymControllerTest.class, TaxonomyControllerTest.class,
+UserInfoTest.class} )
 public class ApiSuiteTest {
 
 }

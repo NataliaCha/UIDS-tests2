@@ -31,7 +31,7 @@ public class APILookupTest {
     @BeforeClass
     public  static   void  testGetToken() {
 
-        RestAssured.baseURI = "https://prototype.datasynthes.com";
+        RestAssured.baseURI = "https://demo.datasynthes.com";
         //     RestAssured.basePath= "api/internal/meta";
         String token1 =
                 given()
@@ -208,7 +208,7 @@ public class APILookupTest {
                 .contentType("application/json")
                 .body(lookup.toString())
                 .when().post("/api/internal/meta/lookup-entities?draft=true").then()
-                //"https://prototype.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
+                //"https://demo.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
                 .assertThat()
                 .statusCode(200)
                 .body(containsString("\"success\":true"));
@@ -322,7 +322,7 @@ public class APILookupTest {
                 .contentType("application/json")
                 .body(lookup.toString())
                 .when().post("/api/internal/meta/lookup-entities?draft=true").then()
-                //"https://prototype.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
+                //"https://demo.datasynthes.com/api/internal/meta/lookup-entities?draft=true"
                 .assertThat()
                 .statusCode(200)
                 .body(containsString("\"success\":true"));
@@ -494,7 +494,7 @@ public class APILookupTest {
                 .contentType("application/json")
                 .body(lookup1.toString())
                 .when().put("/api/internal/meta/lookup-entities/{id}").then()
-                //https://prototype.datasynthes.com/api/internal/meta/dqPolicies/test?draft=true"
+                //https://demo.datasynthes.com/api/internal/meta/dqPolicies/test?draft=true"
                 .assertThat()
                 .statusCode(200)
                 .body(containsString("\"success\":true")).body(containsString("\"displayName\":\"testtest\""));
@@ -755,7 +755,7 @@ public class APILookupTest {
 
 
 
-    //https://prototype.datasynthes.com/api/v1/lookups/Exchange/exportCsvTemplate
+    //https://demo.datasynthes.com/api/v1/lookups/Exchange/exportCsvTemplate
 
 }
 

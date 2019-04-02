@@ -48,7 +48,9 @@ public class DSTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://prototype.datasynthes.com/synthes-frontend/model");
+        driver.get("https://prototype.datasynthes.com/synthes-frontend/model");
+       // driver.get("https://demo.datasynthes.com/synthes-frontend//model");
+       // driver.get("http://prototype.datasynthes.com/synthes-frontend/model");
         WebElement loginField = driver.findElement(By.name("userName"));
         loginField.sendKeys("admin");
         WebElement passwordField = driver.findElement(By.name("password"));
@@ -72,7 +74,7 @@ public class DSTest {
         addDSButton.click();
 
 
-        WebElement newDS = driver.findElement(By.xpath("//div[@class='ui tiny modal transition visible active']/div[@class='actions']/button[4]"));
+        WebElement newDS = driver.findElement(By.xpath("//div[@class='ui tiny modal transition visible active']/div[@class='actions']/button[3]"));
         // driver.findElement(By.xpath("//div[@class='ui tiny modal transition visible active']/div[@class='actions']/button[2]")).click();
         newDS.click();
 
@@ -143,7 +145,11 @@ public class DSTest {
         //проверим импорт файла
         driver.findElement(By.xpath("//i[@class='large icon icon-upload']")).click();
         WebElement uploadElement1 = driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='content']/div[@class='ui action input']/input"));
-        uploadElement1.sendKeys("C:\\Users\\natalia.chaplygina\\Documents\\Рабочее\\tests\\VendorSource_EQ_source.xlsx");
+
+        String downloadFilepath1 = System.getProperty("user.dir");
+        uploadElement1.sendKeys(downloadFilepath1 + "\\tmp\\VendorSource_EQ_source.xlsx");
+
+//        uploadElement1.sendKeys("C:\\Users\\natalia.chaplygina\\Documents\\Рабочее\\tests\\VendorSource_EQ_source.xlsx");
         driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui mini modal transition visible active']/div[@class='content']/div[@class='ui action input']/button[@class='ui icon button']")).click();
 
         //*****тут надо проверить что файл реально загрузился,т.е. появился ряд атрибутов
