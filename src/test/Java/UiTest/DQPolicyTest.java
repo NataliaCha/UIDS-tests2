@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by natalia.chaplygina on 10.12.2018.
  */
-public class QGPolicyTest {
+public class DQPolicyTest {
 
 
 

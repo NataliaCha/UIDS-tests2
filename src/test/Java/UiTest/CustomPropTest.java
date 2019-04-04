@@ -54,7 +54,7 @@ public class CustomPropTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://prototype.datasynthes.com/synthes-frontend/model");
+        driver.get("https://prototype.datasynthes.com/synthes-frontend/model");
         WebElement loginField = driver.findElement(By.name("userName"));
         loginField.sendKeys("admin");
         WebElement passwordField = driver.findElement(By.name("password"));
@@ -64,7 +64,7 @@ public class CustomPropTest {
     }
 
     @Test
-    @DisplayName(" Creation new custom prop")
+    @DisplayName(" Creation custom property")
     // создание cusutom property to itsself+cusutom property to root
     public void A() {
 
@@ -90,6 +90,8 @@ public class CustomPropTest {
        */
         driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div")).clear();
         driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div")).sendKeys("one");
+
+
         driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[2]/a/i[@class='plus circle large icon']")).click();
         driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -even']/div[@class='rt-td'][2]/div")).clear();
         driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -even']/div[@class='rt-td'][2]/div")).sendKeys("two");
@@ -106,6 +108,8 @@ public class CustomPropTest {
         WebElement props = driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']"));
 
         String textprops = props.getText();
+        System.out.println("какой текст получили" + textprops);
+
         //    System.out.println(textprops);
         Assert.assertFalse(textprops.contains("one"));
         Assert.assertTrue(textprops.contains("two"));
@@ -122,37 +126,51 @@ public class CustomPropTest {
         Assert.assertTrue(textprops1.contains("two"));
 
         ///изменим имя
-        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div")).clear();
-        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group']/div[@class='rt-tr -odd']/div[@class='rt-td'][2]/div")).sendKeys("three");
-        driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
-
-        //проверим что имя поменялось
 
 
-        driver.findElement(By.xpath("//*[text()='Unique Security Identifier']")).click();
+
+        WebElement bucl= driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='actions']/button[@class='ui primary button']"));
+
+        String tx= bucl.getText();
+        System.out.print ("text which we received" + tx);
+        bucl.click();
+
+
+
+
+        //   driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/i[@class='close icon']"));
+
+
+        // driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='actions']/button[@class='ui primary button']"));
+
+
+        driver.findElement(By.xpath("//*[text()='Divided Frequency Code']")).click();
 
         driver.findElement(By.xpath("//div[@class='ui card panel collapse-panel'][4]/div[@class='header header']/a[@class='setting-button']/i[@class='setting big icon']")).click();
-        WebElement props2 = driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']"));
 
-        String textprops2 = props2.getText();
-           System.out.println(textprops);
-        Assert.assertFalse(textprops2.contains("two"));
-        Assert.assertFalse(textprops2.contains("one"));
-        Assert.assertTrue(textprops2.contains("three"));
-        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/i[@class='close icon']")).click();
-//сохранить
+        //   driver.findElement(By.xpath("//div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[2]/a/i[@class='plus circle large icon']")).click();
+
+
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='image scrolling content']/div[@class='description']/div[@class='ReactTable -striped -highlight ds-table']/div[@class='rt-table']/div[@class='rt-tbody']/div[@class='rt-tr-group'][1]/div[@class='rt-tr -odd']/div[@class='rt-td'][9]/div/i[@class='trash outline alternate link icon']")).click();
+
+
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active'][2]/div[@class='ui small modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
+
+
+
+        driver.findElement(By.xpath("//div/i[@class='trash outline alternate link icon']")).click();
+
+
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active'][2]/div[@class='ui small modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
+
+        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/div[@class='actions']/button[@class='ui primary button']")).click();
+//        driver.findElement(By.xpath("//body[@class='dimmable dimmed']/div[@class='ui page modals dimmer transition visible active']/div[@class='ui large modal transition visible active']/i[@class='close icon']")).click();
         driver.findElement(By.xpath("//body/div[@id='root']/div[@id='layout']/main/div[@class='data-model-container sidebar-show']/div[@class='content items-tab']/div[@class='active tab ui']/div[@class='container-with-side-buttons']/div[@class='main entities-tab']/div[@class='ui pointing secondary menu']/a[@class='right item']/i[@class='large icon icon-floppy-disk']")).click();
-       //удалить
-
-
-
-
-
-
-
-
-     //   driver.findElement(By.xpath("//*[text()='Business Glossary']")).click();
 
     }
+
+
+
+
 
 }

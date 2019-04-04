@@ -8,7 +8,7 @@ import org.junit.runners.Suite;
 
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({DSTest.class,LookupTest.class,QGPolicyTest.class} )
+@Suite.SuiteClasses({DSTest.class,LookupTest.class, DQPolicyTest.class} )
 
 
 public class UISuiteTest {
