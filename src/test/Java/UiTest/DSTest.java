@@ -3,10 +3,7 @@ package UiTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Flaky;
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,6 +57,13 @@ public class DSTest {
     }
 
 //vn -Dtest=TestCircle#testOne+testTwo test
+
+    @AfterClass
+    public static void tearDown()
+    {
+        driver.quit();
+    }
+
 
     @Test
     //@Description ("Create ")

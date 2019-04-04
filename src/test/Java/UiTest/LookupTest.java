@@ -2,10 +2,7 @@ package UiTest;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,7 +57,11 @@ public class LookupTest {
         WebElement loginButton = driver.findElement(By.xpath("//button[text()='LOG IN']"));
         loginButton.click();
     }
-
+    @AfterClass
+    public static void tearDown()
+    {
+        driver.quit();
+    }
 
     @Test
     @DisplayName("Creation new lookup")

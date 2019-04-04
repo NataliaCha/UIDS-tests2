@@ -5,10 +5,7 @@ package UiTest;
 
 
 import io.qameta.allure.junit4.DisplayName;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.junit.FixMethodOrder;
 import org.junit.rules.TestName;
 import org.junit.runners.MethodSorters;
 
@@ -61,6 +57,12 @@ public class CustomPropTest {
         passwordField.sendKeys("UsaeZ9ph");
         WebElement loginButton = driver.findElement(By.xpath("//button[text()='LOG IN']"));
         loginButton.click();
+    }
+
+    @AfterClass
+    public static void tearDown()
+    {
+        driver.quit();
     }
 
     @Test

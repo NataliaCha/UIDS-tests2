@@ -6,6 +6,7 @@ package UiTest;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.io.FileUtils;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -89,6 +90,11 @@ public class FirstTest {
         loginButton.click();
     }
 
+    @AfterClass
+    public static void tearDown()
+    {
+        driver.quit();
+    }
     @Test
     @Ignore
     public void userLoginTest() {
