@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d1cdfa66-3d1f-4ca6-9349-d67d5d2dc56b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/UiTest/CustomPropTest.java" afterPath="$PROJECT_DIR$/src/test/Java/UiTest/CustomPropTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/UiTest/DQPolicyTest.java" afterPath="$PROJECT_DIR$/src/test/Java/UiTest/DQPolicyTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/UiTest/DSTest.java" afterPath="$PROJECT_DIR$/src/test/Java/UiTest/DSTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/UiTest/FirstTest.java" afterPath="$PROJECT_DIR$/src/test/Java/UiTest/FirstTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/UiTest/LookupTest.java" afterPath="$PROJECT_DIR$/src/test/Java/UiTest/LookupTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Java/UiTest/NestedAttrTest.java" afterPath="$PROJECT_DIR$/src/test/Java/UiTest/NestedAttrTest.java" />
     </list>
     <ignored path="uitest.iws" />
@@ -34,8 +29,8 @@
       <file leaf-file-name="NestedAttrTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/Java/UiTest/NestedAttrTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86090624">
-              <caret line="442" column="0" selection-start-line="442" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6290832">
+              <caret line="432" column="16" selection-start-line="432" selection-start-column="16" selection-end-line="432" selection-end-column="16" />
               <folding>
                 <element signature="e#1953#1954#0" expanded="true" />
                 <element signature="e#1982#1983#0" expanded="true" />
@@ -1122,7 +1117,13 @@
       <option name="project" value="LOCAL" />
       <updated>1554382466415</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="+ update tests">
+      <created>1554389887009</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1554389887009</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1631,8 +1632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Java/UiTest/NestedAttrTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86090624">
-          <caret line="442" column="0" selection-start-line="442" selection-start-column="0" selection-end-line="442" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6290832">
+          <caret line="432" column="16" selection-start-line="432" selection-start-column="16" selection-end-line="432" selection-end-column="16" />
           <folding>
             <element signature="e#1953#1954#0" expanded="true" />
             <element signature="e#1982#1983#0" expanded="true" />
